@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="ApplicationStyle" parent="android:Theme">
+	  <item name="android:buttonStyle">@style/CKButton</item>
+	</style>
+	<style name="CKButton" parent="android:style/Widget.Button">
+	  	<item name="android:background">@drawable/button</item>
+	 </style>
+	 <style name="Theme.Transparent" parent="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+</resources>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="10dp"
+    >
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="100dp" android:orientation="horizontal">
+	    <Button  android:layout_margin="10dp" android:layout_height="fill_parent" android:layout_width="fill_parent" android:layout_weight="0.5" android:text="@string/load_interstitial" 
+	    	android:onClick="onLoadButtonClick"></Button>
+	    <Button  android:layout_margin="10dp" android:layout_height="fill_parent" android:layout_width="fill_parent" android:layout_weight="0.5" android:text="@string/more_apps"
+	    	android:onClick="onMoreButtonClick"></Button>
+    </LinearLayout>
+    
+    <!-- Button android:layout_height="wrap_content" android:layout_width="fill_parent" android:layout_weight="0.12" android:text="Perform Test Click" android:id="@+id/button1"
+     android:onClick="onPerformTestClick"></Button-->
+    
+    <LinearLayout  android:layout_width="fill_parent" android:layout_height="100dp" android:orientation="horizontal">
+	    <Button  android:layout_margin="10dp" android:layout_height="fill_parent" android:layout_width="fill_parent" android:layout_weight="0.5" android:text="@string/preload_interstitial"
+	    	android:onClick="onPreloadClick"></Button>
+	    <Button  android:layout_margin="10dp" android:layout_height="fill_parent" android:layout_width="fill_parent" android:layout_weight="0.5" android:text="@string/preload_more_apps"
+	    	android:onClick="onPreloadMoreAppsClick"></Button>
+    </LinearLayout>
+    
+    <LinearLayout  android:layout_width="fill_parent" android:layout_height="100dp" android:orientation="horizontal">
+	    <Button  android:layout_margin="10dp" android:layout_height="fill_parent" android:layout_width="fill_parent" android:layout_weight="0.5" android:text="@string/clear_preload_data"
+	    	android:onClick="onPreloadClearClick"></Button>
+	    <Button  android:layout_margin="10dp" android:layout_height="fill_parent" android:layout_width="fill_parent" android:layout_weight="0.5" android:text="@string/record_purchase" 
+	    	android:onClick="onPurchaseClick"></Button>
+	</LinearLayout>
+	<LinearLayout  android:layout_width="fill_parent" android:layout_height="100dp" android:orientation="horizontal">
+	    <Button  android:layout_margin="10dp" android:layout_height="fill_parent" android:layout_width="0dp" android:layout_weight="0.5" android:text="@string/track_event"
+	    	android:onClick="onTrackEventClick"></Button>
+	</LinearLayout>
+	<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:id="@+id/TestContainer" />
+</LinearLayout>
