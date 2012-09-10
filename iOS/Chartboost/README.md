@@ -1,6 +1,6 @@
 # Chartboost for iOS
 
-*Version 3.0.2*
+*Version 3.0.6*
 
 The Chartboost iOS SDK is the cornerstone of the Chartboost network. It provides the functionality for showing ads and  more apps pages, and tracking analytics and in-app purchase revenue.
 

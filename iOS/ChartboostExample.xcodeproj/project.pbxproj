@@ -16,12 +16,12 @@
 		3864179615C1F11300824956 /* ExampleAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3864179515C1F11300824956 /* ExampleAppViewController.m */; };
 		3864179915C1F11300824956 /* ExampleAppViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3864179715C1F11300824956 /* ExampleAppViewController_iPhone.xib */; };
 		3864179C15C1F11300824956 /* ExampleAppViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3864179A15C1F11300824956 /* ExampleAppViewController_iPad.xib */; };
-		386417A715C1F12600824956 /* libChartboost.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 386417A515C1F12600824956 /* libChartboost.a */; };
-		386417A815C1F12600824956 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 386417A615C1F12600824956 /* README.md */; };
 		386417B115C1F19200824956 /* big.png in Resources */ = {isa = PBXBuildFile; fileRef = 386417B015C1F19200824956 /* big.png */; };
 		386417B315C1F19E00824956 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 386417B215C1F19E00824956 /* Default.png */; };
 		386417B515C1F1C400824956 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386417B415C1F1C400824956 /* QuartzCore.framework */; };
 		386417B715C1F1C900824956 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386417B615C1F1C900824956 /* SystemConfiguration.framework */; };
+		38678DD715FE850F006C58D7 /* libChartboost.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38678DD515FE850F006C58D7 /* libChartboost.a */; };
+		38678DD815FE850F006C58D7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 38678DD615FE850F006C58D7 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,14 +39,14 @@
 		3864179515C1F11300824956 /* ExampleAppViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleAppViewController.m; sourceTree = "<group>"; };
 		3864179815C1F11300824956 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ExampleAppViewController_iPhone.xib; sourceTree = "<group>"; };
 		3864179B15C1F11300824956 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ExampleAppViewController_iPad.xib; sourceTree = "<group>"; };
-		386417A315C1F12600824956 /* CBAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBAnalytics.h; sourceTree = "<group>"; };
-		386417A415C1F12600824956 /* Chartboost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chartboost.h; sourceTree = "<group>"; };
-		386417A515C1F12600824956 /* libChartboost.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libChartboost.a; sourceTree = "<group>"; };
-		386417A615C1F12600824956 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		386417B015C1F19200824956 /* big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = big.png; path = ../big.png; sourceTree = "<group>"; };
 		386417B215C1F19E00824956 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
 		386417B415C1F1C400824956 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		386417B615C1F1C900824956 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		38678DD315FE850F006C58D7 /* CBAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBAnalytics.h; sourceTree = "<group>"; };
+		38678DD415FE850F006C58D7 /* Chartboost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chartboost.h; sourceTree = "<group>"; };
+		38678DD515FE850F006C58D7 /* libChartboost.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libChartboost.a; sourceTree = "<group>"; };
+		38678DD615FE850F006C58D7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +59,7 @@
 				3864178315C1F11300824956 /* UIKit.framework in Frameworks */,
 				3864178515C1F11300824956 /* Foundation.framework in Frameworks */,
 				3864178715C1F11300824956 /* CoreGraphics.framework in Frameworks */,
-				386417A715C1F12600824956 /* libChartboost.a in Frameworks */,
+				38678DD715FE850F006C58D7 /* libChartboost.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,7 +74,7 @@
 				3864178815C1F11300824956 /* ChartboostExample */,
 				3864178115C1F11300824956 /* Frameworks */,
 				3864177F15C1F11300824956 /* Products */,
-				386417A215C1F12600824956 /* Chartboost */,
+				38678DD215FE850F006C58D7 /* Chartboost */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,13 +123,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		386417A215C1F12600824956 /* Chartboost */ = {
+		38678DD215FE850F006C58D7 /* Chartboost */ = {
 			isa = PBXGroup;
 			children = (
-				386417A315C1F12600824956 /* CBAnalytics.h */,
-				386417A415C1F12600824956 /* Chartboost.h */,
-				386417A515C1F12600824956 /* libChartboost.a */,
-				386417A615C1F12600824956 /* README.md */,
+				38678DD315FE850F006C58D7 /* CBAnalytics.h */,
+				38678DD415FE850F006C58D7 /* Chartboost.h */,
+				38678DD515FE850F006C58D7 /* libChartboost.a */,
+				38678DD615FE850F006C58D7 /* README.md */,
 			);
 			path = Chartboost;
 			sourceTree = "<group>";
@@ -188,9 +188,9 @@
 				3864178D15C1F11300824956 /* InfoPlist.strings in Resources */,
 				3864179915C1F11300824956 /* ExampleAppViewController_iPhone.xib in Resources */,
 				3864179C15C1F11300824956 /* ExampleAppViewController_iPad.xib in Resources */,
-				386417A815C1F12600824956 /* README.md in Resources */,
 				386417B115C1F19200824956 /* big.png in Resources */,
 				386417B315C1F19E00824956 /* Default.png in Resources */,
+				38678DD815FE850F006C58D7 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +333,7 @@
 				386417A115C1F11300824956 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

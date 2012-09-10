@@ -47,6 +47,13 @@
     [cb cacheInterstitial:@"After level 1"];
 
     // Once cached, you can use showInterstitial at any point in your app to display the interstitial immediately
+    // If you are not using named locations, simply use [cb showInterstitial];
+    // If you ARE using named locations, display the cached interstitials
+    // [cb showInterstitial:@"Main Menu"];
+    // [cb showInterstitial:@"After level 1"];
+    
+    // Note 1) Each named location has it's own cache, only one interstitial is stored per named location
+    // and  2) Cached interstitials are deleted as soon as they're shown
 
     
     // Cache the more apps page so it's ready & loaded
@@ -68,16 +75,22 @@
     // In here is where you would show a house ad, or do something else when a chartboost interstitial fails
 }
 
-// Same as above. If you get this, make sure you have added campaigns to the More Apps setup for your app
+// Same as above. If you get this, make sure you have added campaigns to the More Apps page setup for your app
+// You can find this inside the App > Edit page in the Chartboost dashboard
 - (void)didFailToLoadMoreApps {
     NSLog(@"failure to load more apps");
 }
 
 // This is used to control when an interstitial should or should not be displayed
 // The default is YES, and that will let an interstitial display as normal
-// If the user is on a slow network connection and interstitials take a while to load, you m
+// If it's not preferable to display an interstitial, return NO to prevent the interstitial from displaying
 - (BOOL)shouldDisplayInterstitial:(NSString *)location {
     NSLog(@"about to display interstitial at location %@", location);
+    
+    // For example:
+    // if the user has left the main menu and is currently playing your game, return NO;
+    
+    // Otherwise return YES to display the interstitial
     return YES;
 }
 
@@ -88,6 +101,16 @@
     
     [[Chartboost sharedChartboost] cacheInterstitial:location];
 }
+
+
+
+
+
+
+
+
+
+
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
