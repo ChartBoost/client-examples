@@ -12,6 +12,22 @@
 // Import Chartboost.h
 #import "Chartboost.h"
 
+/*
+ * Required Frameworks
+ *
+ * Ensure that you are linking with the following libraries:
+ *
+ * QuartzCore.framework
+ * SystemConfiguration.framework
+ * CoreGraphics.framework
+ * AdSupport.framework (weak-link)
+ * StoreKit.framework (weak-link)
+ *
+ * Navigate to Project (ChartboostExample) > Targets (ChartboostExample) > Build Phases > Link Binary With Libraries
+ *
+ */
+
+
 // Add the ChartboostDelegate to your AppDelegate
 @interface ExampleAppAppDelegate () <ChartboostDelegate>
 @end
@@ -22,18 +38,24 @@
 @synthesize viewController = _viewController;
 
 
-
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    
     
     // Initialize Chartboost
     Chartboost *cb = [Chartboost sharedChartboost];
-    
-    // Add your own app id & signature. These can be found on App Edit page for your app in the Chartboost dashboard
-    cb.appId = @"4e2db0c935c6d3c415000015";
-    cb.appSignature = @"5c1a848c22862401cf62b66f72e087ed8c808b17";
-    
+        
+    /*
+     * Add your own app id & signature. These can be found on App Edit page for your app in the Chartboost dashboard
+     *
+     * Notes: 
+     * 1) BE SURE YOU USE YOUR OWN CORRECT APP ID & SIGNATURE!
+     * 2) We cant help if it is missing or incorrect in a live app. You will have to resubmit.
+     */
+
+    cb.appId = @"4f21c409cd1cb2fb7000001b";
+    cb.appSignature = @"92e2de2fd7070327bdeb54c15a5295309c6fcd2d";
+        
     cb.delegate = self;
     
     // Begin a user session. This should be done once per boot
@@ -42,48 +64,49 @@
     // Cache an interstitial at the default location
     [cb cacheInterstitial];
     
-    // Cache an interstitial at some named locations -- recommended!!
-    [cb cacheInterstitial:@"Main Menu"];
+    // Cache an interstitial at some named locations -- (Pro Tip: do this!)
     [cb cacheInterstitial:@"After level 1"];
+    [cb cacheInterstitial:@"Pause screen"];
 
-    // Once cached, you can use showInterstitial at any point in your app to display the interstitial immediately
-    // If you are not using named locations, simply use [cb showInterstitial];
-    // If you ARE using named locations, display the cached interstitials
-    // [cb showInterstitial:@"Main Menu"];
-    // [cb showInterstitial:@"After level 1"];
+    /*
+     * Once cached, use showInterstitial to display the interstitial immediately like this:
+     *
+     * [cb showInterstitial:@"After level 1"];
+     * 
+     * Notes:
+     * 1) Each named location has it's own cache, only one interstitial is stored per named location
+     * 2) Cached interstitials are deleted as soon as they're shown
+     * 3) If no interstitial is cached for that location, showInterstitial will load one on the fly from Chartboost
+     * 
+     * Pro Tip: Implement didDismissInterstitial to immediately re-cache interstitials by location (see below)
+     *
+     */ 
     
-    // Note 1) Each named location has it's own cache, only one interstitial is stored per named location
-    // and  2) Cached interstitials are deleted as soon as they're shown
-
-    
-    // Cache the more apps page so it's ready & loaded
+    // Cache the more apps page so it's loaded & ready
     [cb cacheMoreApps];
-    
 }
 
-// This lets your app know when an interstitial has been successfully cached
-// You can use this to know which locations are ready to display immediately
-- (void)didCacheInterstitial:(NSString *)location {
-    NSLog(@"interstitial cached at location %@", location);
-}
 
-// This is called when an interstitial has failed to load for any reason
-// Possible causes are network connection or there's no publishing campaign setup for your app
-- (void)didFailToLoadInterstitial:(NSString *)location {
-    NSLog(@"failure to load interstitial at location %@", location);
-    
-    // In here is where you would show a house ad, or do something else when a chartboost interstitial fails
-}
+/*
+ * Chartboost Delegate Methods
+ * 
+ * Recommended for everyone: shouldDisplayInterstitial
+ */
 
-// Same as above. If you get this, make sure you have added campaigns to the More Apps page setup for your app
-// You can find this inside the App > Edit page in the Chartboost dashboard
-- (void)didFailToLoadMoreApps {
-    NSLog(@"failure to load more apps");
-}
 
-// This is used to control when an interstitial should or should not be displayed
-// The default is YES, and that will let an interstitial display as normal
-// If it's not preferable to display an interstitial, return NO to prevent the interstitial from displaying
+/* 
+ * shouldDisplayInterstitial
+ *
+ * This is used to control when an interstitial should or should not be displayed
+ * The default is YES, and that will let an interstitial display as normal
+ * If it's not okay to display an interstitial, return NO
+ *
+ * For example: during gameplay, return NO.
+ *
+ * Is fired on:
+ * -Interstitial is loaded & ready to display
+ */
+
 - (BOOL)shouldDisplayInterstitial:(NSString *)location {
     NSLog(@"about to display interstitial at location %@", location);
     
@@ -94,12 +117,91 @@
     return YES;
 }
 
-// This is called when an interstitial is dismissed for a click, or a close.
-// If you expect to show another interstitial at this location, use this to cache another when they close it.
+
+/*
+ * didFailToLoadInterstitial
+ *
+ * This is called when an interstitial has failed to load for any reason
+ *
+ * Is fired on:
+ * - No network connection
+ * - No publishing campaign matches for that user (go make a new one in the dashboard)
+ */
+
+- (void)didFailToLoadInterstitial:(NSString *)location {
+    NSLog(@"failure to load interstitial at location %@", location);
+    
+    // Show a house ad or do something else when a chartboost interstitial fails to load
+}
+
+
+/*
+ * didCacheInterstitial
+ *
+ * Passes in the location name that has successfully been cached.
+ *
+ * Is fired on:
+ * - All assets loaded
+ * - Triggered by cacheInterstitial
+ */
+
+- (void)didCacheInterstitial:(NSString *)location {
+    NSLog(@"interstitial cached at location %@", location);
+    
+}
+
+/*
+ * didFailToLoadMoreApps
+ *
+ * This is called when the more apps page has failed to load for any reason
+ *
+ * Is fired on:
+ * - No network connection
+ * - No more apps page has been created (add a more apps page in the dashboard)
+ * - No publishing campaign matches for that user (add more campaigns to your more apps page)
+ *  -Find this inside the App > Edit page in the Chartboost dashboard
+ */
+
+- (void)didFailToLoadMoreApps {
+    NSLog(@"failure to load more apps");
+}
+
+
+/*
+ * didDismissInterstitial
+ *
+ * This is called when an interstitial is dismissed
+ *
+ * Is fired on:
+ * - Interstitial click
+ * - Interstitial close
+ *
+ * #Pro Tip: Use the delegate method below to immediately re-cache interstitials
+ */
+
 - (void)didDismissInterstitial:(NSString *)location {
     NSLog(@"dismissed interstitial at location %@", location);
     
     [[Chartboost sharedChartboost] cacheInterstitial:location];
+}
+
+
+/*
+ * didDismissMoreApps
+ *
+ * This is called when the more apps page is dismissed
+ *
+ * Is fired on:
+ * - More Apps click
+ * - More Apps close
+ *
+ * #Pro Tip: Use the delegate method below to immediately re-cache the more apps page
+ */
+
+- (void)didDismissMoreApps {
+    NSLog(@"dismissed more apps page, re-caching now");
+    
+    [[Chartboost sharedChartboost] cacheMoreApps];
 }
 
 
@@ -108,9 +210,7 @@
 
 
 
-
-
-
+// Default iOS stuff below here
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
