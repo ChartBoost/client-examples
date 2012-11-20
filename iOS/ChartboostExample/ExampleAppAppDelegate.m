@@ -94,7 +94,7 @@
  */
 
 
-/* 
+/*
  * shouldDisplayInterstitial
  *
  * This is used to control when an interstitial should or should not be displayed
@@ -143,6 +143,10 @@
  * Is fired on:
  * - All assets loaded
  * - Triggered by cacheInterstitial
+ *
+ * Notes:
+ * - Similar to this is: cb.hasCachedInterstitial(String location)
+ * Which will return true if a cached interstitial exists for that location
  */
 
 - (void)didCacheInterstitial:(NSString *)location {
