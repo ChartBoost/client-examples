@@ -48,7 +48,7 @@ public class ChartboostExampleActivity extends Activity {
 		this.cb = Chartboost.sharedChartboost();
 		String appId = "4f7b433509b6025804000002";
 		String appSignature = "dd2d41b69ac01b80f443f5b6cf06096d457f82bd";
-		this.cb.onCreate(this, appId, appSignature, null);
+		this.cb.onCreate(this, appId, appSignature, this.chartBoostDelegate);
 		
 		/*
 		 * Notify the beginning of a user session
