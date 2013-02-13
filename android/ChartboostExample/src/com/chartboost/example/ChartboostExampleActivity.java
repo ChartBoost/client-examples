@@ -117,9 +117,9 @@ public class ChartboostExampleActivity extends Activity {
 		 * shouldDisplayInterstitial(String location)
 		 *
 		 * This is used to control when an interstitial should or should not be displayed
-		 * If you should not display an interstitial, return NO
+		 * If you should not display an interstitial, return false
 		 *
-		 * For example: during gameplay, return NO.
+		 * For example: during gameplay, return false.
 		 *
 		 * Is fired on:
 		 * - showInterstitial()
@@ -135,9 +135,9 @@ public class ChartboostExampleActivity extends Activity {
 		 * shouldRequestInterstitial(String location)
 		 * 
 		 * This is used to control when an interstitial should or should not be requested
-		 * If you should not request an interstitial from the server, return NO
+		 * If you should not request an interstitial from the server, return false
 		 *
-		 * For example: user should not see interstitials for some reason, return NO.
+		 * For example: user should not see interstitials for some reason, return false.
 		 *
 		 * Is fired on:
 		 * - cacheInterstitial()
@@ -265,7 +265,7 @@ public class ChartboostExampleActivity extends Activity {
 		/*
 		 * shouldDisplayLoadingViewForMoreApps()
 		 *
-		 * Return NO to prevent the pretty More-Apps loading screen
+		 * Return false to prevent the pretty More-Apps loading screen
 		 *
 		 * Is fired on:
 		 * - showMoreApps()
@@ -278,7 +278,7 @@ public class ChartboostExampleActivity extends Activity {
 		/*
 		 * shouldRequestMoreApps()
 		 * 
-		 * Return NO to prevent a More-Apps page request
+		 * Return false to prevent a More-Apps page request
 		 *
 		 * Is fired on:
 		 * - cacheMoreApps()
@@ -293,7 +293,7 @@ public class ChartboostExampleActivity extends Activity {
 		/*
 		 * shouldDisplayMoreApps()
 		 * 
-		 * Return NO to prevent the More-Apps page from displaying
+		 * Return false to prevent the More-Apps page from displaying
 		 *
 		 * Is fired on:
 		 * - showMoreApps() 
