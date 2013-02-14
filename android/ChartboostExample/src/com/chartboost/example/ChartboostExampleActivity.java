@@ -51,6 +51,16 @@ public class ChartboostExampleActivity extends Activity {
 		this.cb.onCreate(this, appId, appSignature, this.chartBoostDelegate);
 		
 		/*
+		 *  Use activities instead of a view
+		 *  
+		 *  Implement cb.setImpressionsUseActivities(true);
+		 *  
+		 *  Note:
+		 *  - Be sure to add the activity to your AndroidManifest.xml
+		 */
+		this.cb.setImpressionsUseActivities(true);
+		
+		/*
 		 * Notify the beginning of a user session
 		 * 
 		 * You may place cb.startSession() in onCreate(), onStart(), or onResume()
