@@ -58,7 +58,7 @@ public class ChartboostExampleActivity extends Activity {
 		 *  Note:
 		 *  - Be sure to add the activity to your AndroidManifest.xml
 		 */
-		this.cb.setImpressionsUseActivities(true);
+		//this.cb.setImpressionsUseActivities(true);
 		
 		/*
 		 * Notify the beginning of a user session
