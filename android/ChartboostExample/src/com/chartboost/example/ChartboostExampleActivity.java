@@ -94,6 +94,18 @@ public class ChartboostExampleActivity extends Activity {
 	}
 	
 	/*
+	 * Add cb.onDestroy(this) to your activity's onDestroy() method
+	 * 
+	 * If you do not have an onDestroy() method, create one using the code below
+	 */
+	@Override
+	protected void onDestroy() {
+		super.onDestroy();
+		
+		this.cb.onDestroy(this);
+	}
+	
+	/*
 	 * Add the code below to the top of your activity's onBackPressed() method
 	 * 
 	 * Required because Chartboost does not use an activity to display the view
