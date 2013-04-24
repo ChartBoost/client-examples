@@ -209,7 +209,18 @@
 }
 
 
+/*
+ * shouldRequestInterstitialsInFirstSession
+ *
+ * This sets logic to prevent interstitials from being displayed until the second startSession call
+ * 
+ * The default is NO, meaning that it will always request & display interstitials. 
+ * If your app displays interstitials before the first time the user plays the game, implement this method to return NO.  
+ */
 
+- (BOOL)shouldRequestInterstitialsInFirstSession {
+    return YES;
+}
 
 
 
