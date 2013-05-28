@@ -14,9 +14,19 @@ You'll get a folder that includes both platforms' projects; after unzipping, kee
 
 <img src="https://s3.amazonaws.com/chartboost/help_assets/client-examples2.jpeg" />
 
-This file contains the Chartboost code you'd add to AppDelegate.m in your own game &ndash; you can configure it with your App ID (`cb.appId`) and App Signature (`cb.appSignature`) to test the Chartboost integration independent of your code. 
+This file contains the Chartboost code you'd add to AppDelegate.m in your own game &ndash; you can configure it with your App ID (`cb.appId`) and App Signature (`cb.appSignature`) to test the Chartboost integration, independent of your code. 
 
 When run in Simulator or on an iOS device, the project can display any interstitials or More Apps pages set (via the Chartboost dashboard) to run in your game; it's a great way to debug problematic campaign logic.
 
 ---
 #####Installing Android Sample Project in Eclipse
+
+1. Open Eclipse and navigate to **File > Import...**. Highlight **Existing Android Code Into Workspace** (in the **Android** folder) and hit **Next**.
+2. Click **Browse**, highlight the **Android** folder from the .ZIP archive, then click **Open** and **Finish**
+3. Navigate to the **ChartboostExampleActivity.java** file by expanding the menus shown below:
+
+<img src="https://s3.amazonaws.com/chartboost/help_assets/client-examples4.jpeg" />
+
+This file contains the Chartboost code you'd add to the file in your own game &ndash; you can configure it with your App ID (`String appId`) and App Signature (`String appSignature`) to test the Chartboost integration, independent of your code. 
+
+When run on an Android device, the project can display any interstitials or More Apps pages set (via the Chartboost dashboard) to run in your game; it's a great way to debug problematic campaign logic.
