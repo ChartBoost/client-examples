@@ -21,7 +21,7 @@ When run in Simulator or on an iOS device, the project can display any interstit
 ---
 #####Installing Android Sample Project in Eclipse
 
-1. Open Eclipse and navigate to **File > Import...**. Highlight **Existing Android Code Into Workspace** (in the **Android** folder) and hit **Next**.
+1. Open Eclipse and navigate to **File > Import**. Highlight **Existing Android Code Into Workspace** (in the **Android** folder) and hit **Next**.
 2. Click **Browse**, highlight the **Android** folder from the .ZIP archive, then click **Open** and **Finish**
 3. Navigate to the **ChartboostExampleActivity.java** file by expanding the menus shown below:
 
