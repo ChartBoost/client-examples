@@ -16,7 +16,7 @@ You'll get a folder that includes both platforms' projects; after unzipping, kee
 
 This file contains the Chartboost code you'd add to AppDelegate.m in your own game &ndash; you can configure it with your App ID (`cb.appId`) and App Signature (`cb.appSignature`) to test the Chartboost integration, independent of your code. 
 
-When run in Simulator or on an iOS device, the project can display any interstitials or More Apps pages set (via the Chartboost dashboard) to run in your game; it's a great way to debug problematic campaign logic.
+When run in Simulator or on an iOS device, the project can display any interstitials or More Apps pages you've set up (via the Chartboost dashboard) to run in the game; it's a great way to debug problematic campaign logic.
 
 ---
 #####Installing Android Sample Project in Eclipse
@@ -29,4 +29,4 @@ When run in Simulator or on an iOS device, the project can display any interstit
 
 This file contains the Chartboost code you'd add to the file in your own game &ndash; you can configure it with your App ID (`String appId`) and App Signature (`String appSignature`) to test the Chartboost integration, independent of your code. 
 
-When run on an Android device, the project can display any interstitials or More Apps pages set (via the Chartboost dashboard) to run in your game; it's a great way to debug problematic campaign logic.
+When run on an Android device, the project can display any interstitials or More Apps pages you've set up (via the Chartboost dashboard) to run in the game; it's a great way to debug problematic campaign logic.
