@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.Toast;
+import android.provider.Settings.Secure;
 
 // Import the Chartboost SDK
 import com.chartboost.sdk.Chartboost;
@@ -66,6 +67,9 @@ public class ChartboostExampleActivity extends Activity {
 		 * You may place cb.startSession() in onCreate(), onStart(), or onResume()
 		 */
 		this.cb.startSession();
+		
+		String android_id = Secure.getString(getBaseContext().getContentResolver(),Secure.ANDROID_ID);
+		Log.e(TAG, android_id);
 
 	}
 
