@@ -8,6 +8,8 @@
 
 #import "ExampleAppAppDelegate.h"
 #import "ExampleAppViewController.h"
+#import <CommonCrypto/CommonDigest.h>
+#import <AdSupport/AdSupport.h>
 
 // Import Chartboost.h
 #import "Chartboost.h"
@@ -84,6 +86,12 @@
     
     // Cache the more apps page so it's loaded & ready
     [cb cacheMoreApps];
+    
+    // Pro Tip: Use code below to Print IFA (Identifier for Advertising) in Output section. iOS 6+ devices only.
+    NSString* ifa = [[[NSClassFromString(@"ASIdentifierManager") sharedManager] advertisingIdentifier] UUIDString];
+    ifa = [[ifa stringByReplacingOccurrencesOfString:@"-" withString:@""] lowercaseString];
+    NSLog(@"IFA: %@",ifa);
+    
 }
 
 
