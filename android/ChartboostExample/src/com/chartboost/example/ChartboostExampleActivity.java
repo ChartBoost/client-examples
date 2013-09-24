@@ -284,6 +284,29 @@ public class ChartboostExampleActivity extends Activity {
 		public void didShowInterstitial(String location) {
 			Log.i(TAG, "INTERSTITIAL '" + location + "' SHOWN");
 		}
+		
+		/*
+		 * didFailToLoadURL(String location)
+		 * 
+		 * This is called when a url after a click has failed to load for any reason
+		 *
+		 * Is fired on:
+		 * - Interstitial click
+		 * - More-Apps click
+		 * 
+		 * Possible reasons:
+		 * - No network connection
+		 * - no valid activity to launch
+		 * - unable to parse url
+		 */
+		@Override
+		public void didFailToLoadUrl(String url) {
+		    // Show a house ad or do something else when a chartboost interstitial fails to load
+
+			Log.i(TAG, "URL '"+url+"' REQUEST FAILED");
+			Toast.makeText(ChartboostExampleActivity.this, "URL '"+url+"' Load Failed",
+					Toast.LENGTH_SHORT).show();
+		}
 
 		/*
 		 * More Apps delegate methods
@@ -510,29 +533,4 @@ public class ChartboostExampleActivity extends Activity {
     	Log.i(TAG, "clearCache");
     	Toast.makeText(this, "Clearing cache", Toast.LENGTH_SHORT).show();
     }
-    
-    /*
-     * ARPU Beta Methods
-     * 
-     * Request access to the ARPU beta program before using these methods
-     */
-	public void onPurchaseClick(View view) {
-				
-		Log.i(TAG, "Purchase Clicked!");
-		HashMap<String, Object> meta = new HashMap<String, Object>();
-		meta.put("fakemeta1", 5);
-		meta.put("fakemeta2", "string");
-		CBAnalytics.sharedAnalytics().recordPaymentTransaction(
-				"OBJECT_001", "Test Object", 0.99, "$", 1, meta);
-		Toast.makeText(this, "Recording Purchase Transaction",
-				Toast.LENGTH_SHORT).show();
-	}
-
-	public void onTrackEventClick(View view) {
-		HashMap<String, Object> meta = new HashMap<String, Object>();
-		meta.put("fakeeventmeta1", 5);
-		meta.put("fakeeventmeta2", "string");
-		Log.i(TAG, "Track Event Clicked!");
-		CBAnalytics.sharedAnalytics().trackEvent("EventName", 5, meta);
-	}
 }
