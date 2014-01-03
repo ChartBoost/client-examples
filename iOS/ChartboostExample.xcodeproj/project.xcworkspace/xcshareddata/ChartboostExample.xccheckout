@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>14C1A286-9A66-4FB6-8F7D-90561703C1EE</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ChartboostExample</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>DDCC6BCD-2A6F-4379-9A42-146ABA75E095</key>
+		<string>ssh://github.com/ChartBoost/client-examples.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>iOS/ChartboostExample.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>DDCC6BCD-2A6F-4379-9A42-146ABA75E095</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/ChartBoost/client-examples.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>DDCC6BCD-2A6F-4379-9A42-146ABA75E095</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DDCC6BCD-2A6F-4379-9A42-146ABA75E095</string>
+			<key>IDESourceControlWCCName</key>
+			<string>client-examples</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -22,8 +22,8 @@
 		386417B715C1F1C900824956 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386417B615C1F1C900824956 /* SystemConfiguration.framework */; };
 		38B9695D16274F2D00748624 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3817F5E11612262900D1F217 /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		38B9695F162750AC00748624 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38B9695E162750AC00748624 /* StoreKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		F8CA892D1731D3BC00FE4A39 /* libChartboost.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F8CA892B1731D3BC00FE4A39 /* libChartboost.a */; };
-		F8CA892E1731D3BC00FE4A39 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F8CA892C1731D3BC00FE4A39 /* README.md */; };
+		F8D6C01D1877802E008515A7 /* libChartboost.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F8D6C01B1877802E008515A7 /* libChartboost.a */; };
+		F8D6C01E1877802E008515A7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F8D6C01C1877802E008515A7 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,9 +47,9 @@
 		386417B415C1F1C400824956 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		386417B615C1F1C900824956 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		38B9695E162750AC00748624 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		F8CA892A1731D3BC00FE4A39 /* Chartboost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chartboost.h; sourceTree = "<group>"; };
-		F8CA892B1731D3BC00FE4A39 /* libChartboost.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libChartboost.a; sourceTree = "<group>"; };
-		F8CA892C1731D3BC00FE4A39 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		F8D6C01A1877802E008515A7 /* Chartboost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chartboost.h; sourceTree = "<group>"; };
+		F8D6C01B1877802E008515A7 /* libChartboost.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libChartboost.a; sourceTree = "<group>"; };
+		F8D6C01C1877802E008515A7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +63,8 @@
 				386417B515C1F1C400824956 /* QuartzCore.framework in Frameworks */,
 				3864178315C1F11300824956 /* UIKit.framework in Frameworks */,
 				3864178515C1F11300824956 /* Foundation.framework in Frameworks */,
+				F8D6C01D1877802E008515A7 /* libChartboost.a in Frameworks */,
 				3864178715C1F11300824956 /* CoreGraphics.framework in Frameworks */,
-				F8CA892D1731D3BC00FE4A39 /* libChartboost.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,7 +74,7 @@
 		3864177315C1F11300824956 = {
 			isa = PBXGroup;
 			children = (
-				F8CA89291731D3BC00FE4A39 /* Chartboost  */,
+				F8D6C0191877802D008515A7 /* Chartboost */,
 				38B9695E162750AC00748624 /* StoreKit.framework */,
 				3817F5E11612262900D1F217 /* AdSupport.framework */,
 				386417B615C1F1C900824956 /* SystemConfiguration.framework */,
@@ -130,14 +130,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		F8CA89291731D3BC00FE4A39 /* Chartboost  */ = {
+		F8D6C0191877802D008515A7 /* Chartboost */ = {
 			isa = PBXGroup;
 			children = (
-				F8CA892A1731D3BC00FE4A39 /* Chartboost.h */,
-				F8CA892B1731D3BC00FE4A39 /* libChartboost.a */,
-				F8CA892C1731D3BC00FE4A39 /* README.md */,
+				F8D6C01A1877802E008515A7 /* Chartboost.h */,
+				F8D6C01B1877802E008515A7 /* libChartboost.a */,
+				F8D6C01C1877802E008515A7 /* README.md */,
 			);
-			path = "Chartboost ";
+			path = Chartboost;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,12 +191,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8D6C01E1877802E008515A7 /* README.md in Resources */,
 				3864178D15C1F11300824956 /* InfoPlist.strings in Resources */,
 				3864179915C1F11300824956 /* ExampleAppViewController_iPhone.xib in Resources */,
 				3864179C15C1F11300824956 /* ExampleAppViewController_iPad.xib in Resources */,
 				386417B115C1F19200824956 /* big.png in Resources */,
 				386417B315C1F19E00824956 /* Default.png in Resources */,
-				F8CA892E1731D3BC00FE4A39 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,8 +298,9 @@
 				INFOPLIST_FILE = "ChartboostExample/ChartboostExample-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/Chartboost\"",
-					"\"$(SRCROOT)/Chartboost \"",
+					"\\\"$(SRCROOT)/Chartboost\\\"",
+					"\\\"$(SRCROOT)/Chartboost\\ \\\"",
+					"/Users/Anish/Desktop/Chartboost/gitcodes/client-examples/iOS/Chartboost",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -314,8 +315,9 @@
 				INFOPLIST_FILE = "ChartboostExample/ChartboostExample-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/Chartboost\"",
-					"\"$(SRCROOT)/Chartboost \"",
+					"\\\"$(SRCROOT)/Chartboost\\\"",
+					"\\\"$(SRCROOT)/Chartboost\\ \\\"",
+					"/Users/Anish/Desktop/Chartboost/gitcodes/client-examples/iOS/Chartboost",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
