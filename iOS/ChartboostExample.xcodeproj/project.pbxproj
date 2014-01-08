@@ -298,9 +298,8 @@
 				INFOPLIST_FILE = "ChartboostExample/ChartboostExample-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\\\"$(SRCROOT)/Chartboost\\\"",
-					"\\\"$(SRCROOT)/Chartboost\\ \\\"",
-					"/Users/Anish/Desktop/Chartboost/gitcodes/client-examples/iOS/Chartboost",
+					"\"$(SRCROOT)/Chartboost\"",
+					"\"$(SRCROOT)/Chartboost \"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -315,9 +314,8 @@
 				INFOPLIST_FILE = "ChartboostExample/ChartboostExample-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\\\"$(SRCROOT)/Chartboost\\\"",
-					"\\\"$(SRCROOT)/Chartboost\\ \\\"",
-					"/Users/Anish/Desktop/Chartboost/gitcodes/client-examples/iOS/Chartboost",
+					"\"$(SRCROOT)/Chartboost\"",
+					"\"$(SRCROOT)/Chartboost \"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
