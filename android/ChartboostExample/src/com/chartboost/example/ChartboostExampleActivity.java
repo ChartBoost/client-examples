@@ -45,7 +45,14 @@ public class ChartboostExampleActivity extends Activity {
 		 * format: cb.onCreate(Context, String appId, String appSignature, ChartboostDelegate)
 		 * 
 		 * If you are not using delegate methods, pass null into the 4th parameter
+		 *
+		 * Add your own app id & signature. These can be found on App Edit page for your app in the Chartboost dashboard
+		 *
+		 * Notes:
+		 * 1) BE SURE YOU USE YOUR OWN CORRECT APP ID & SIGNATURE!
+		 * 2) We cant help if it is missing or incorrect in a live app. You will have to resubmit.
 		 */
+
 		this.cb = Chartboost.sharedChartboost();
 		String appId = "4f7b433509b6025804000002";
 		String appSignature = "dd2d41b69ac01b80f443f5b6cf06096d457f82bd";
