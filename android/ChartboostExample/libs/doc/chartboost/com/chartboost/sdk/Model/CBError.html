@@ -3,7 +3,7 @@
 <HTML>
 <HEAD>
 <TITLE>
-CBAnalytics
+CBError
 </TITLE>
 
 
@@ -13,7 +13,7 @@ CBAnalytics
 function windowTitle()
 {
     if (location.href.indexOf('is-external=true') == -1) {
-        parent.document.title="CBAnalytics";
+        parent.document.title="CBError";
     }
 }
 </SCRIPT>
@@ -53,10 +53,10 @@ function windowTitle()
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
 &nbsp;PREV CLASS&nbsp;
-&nbsp;NEXT CLASS</FONT></TD>
+&nbsp;<A HREF="../../../../com/chartboost/sdk/Model/CBError.CBClickError.html" title="enum in com.chartboost.sdk.Model"><B>NEXT CLASS</B></A></FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
-  <A HREF="../../../../index.html?com/chartboost/sdk/Analytics/CBAnalytics.html" target="_top"><B>FRAMES</B></A>  &nbsp;
-&nbsp;<A HREF="CBAnalytics.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+  <A HREF="../../../../index.html?com/chartboost/sdk/Model/CBError.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="CBError.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
 &nbsp;<SCRIPT type="text/javascript">
   <!--
   if(window==top) {
@@ -73,9 +73,9 @@ function windowTitle()
 </TR>
 <TR>
 <TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
-  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+  SUMMARY:&nbsp;<A HREF="#nested_class_summary">NESTED</A>&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
 <TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
-DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
 </TR>
 </TABLE>
 <A NAME="skip-navbar_top"></A>
@@ -85,34 +85,67 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A
 <!-- ======== START OF CLASS DATA ======== -->
 <H2>
 <FONT SIZE="-1">
-com.chartboost.sdk.Analytics</FONT>
+com.chartboost.sdk.Model</FONT>
 <BR>
-Class CBAnalytics</H2>
+Class CBError</H2>
 <PRE>
 java.lang.Object
-  <IMG SRC="../../../../resources/inherit.gif" ALT="extended by "><B>com.chartboost.sdk.Analytics.CBAnalytics</B>
+  <IMG SRC="../../../../resources/inherit.gif" ALT="extended by "><B>com.chartboost.sdk.Model.CBError</B>
 </PRE>
 <HR>
 <DL>
-<DT><PRE>public class <B>CBAnalytics</B><DT>extends java.lang.Object</DL>
+<DT><PRE>public final class <B>CBError</B><DT>extends java.lang.Object</DL>
 </PRE>
 
 <P>
 <HR>
 
 <P>
-<!-- =========== FIELD SUMMARY =========== -->
+<!-- ======== NESTED CLASS SUMMARY ======== -->
 
-<A NAME="field_summary"><!-- --></A>
+<A NAME="nested_class_summary"><!-- --></A>
 <TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
 <TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
 <TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
-<B>Field Summary</B></FONT></TH>
+<B>Nested Class Summary</B></FONT></TH>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../com/chartboost/sdk/Analytics/CBAnalytics.html#TAG">TAG</A></B></CODE>
+<CODE>static&nbsp;class</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/chartboost/sdk/Model/CBError.CBClickError.html" title="enum in com.chartboost.sdk.Model">CBError.CBClickError</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;class</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/chartboost/sdk/Model/CBError.CBImpressionError.html" title="enum in com.chartboost.sdk.Model">CBError.CBImpressionError</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;class</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/chartboost/sdk/Model/CBError.CBInternalError.html" title="enum in com.chartboost.sdk.Model">CBError.CBInternalError</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../com/chartboost/sdk/Model/CBError.html#CBError(com.chartboost.sdk.Model.CBError.CBInternalError, java.lang.String)">CBError</A></B>(<A HREF="../../../../com/chartboost/sdk/Model/CBError.CBInternalError.html" title="enum in com.chartboost.sdk.Model">CBError.CBInternalError</A>&nbsp;error,
+        java.lang.String&nbsp;errorDesc)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
@@ -129,51 +162,43 @@ java.lang.Object
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;java.lang.Boolean</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../com/chartboost/sdk/Analytics/CBAnalytics.html#recordPaymentTransaction(java.lang.String, java.lang.String, double, java.lang.String, int, java.lang.Object)">recordPaymentTransaction</A></B>(java.lang.String&nbsp;sku,
-                         java.lang.String&nbsp;title,
-                         double&nbsp;price,
-                         java.lang.String&nbsp;currency,
-                         int&nbsp;quantity,
-                         java.lang.Object&nbsp;meta)</CODE>
+<CODE>&nbsp;<A HREF="../../../../com/chartboost/sdk/Model/CBError.CBInternalError.html" title="enum in com.chartboost.sdk.Model">CBError.CBInternalError</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/chartboost/sdk/Model/CBError.html#getError()">getError</A></B>()</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Record a payment transaction.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>static&nbsp;<A HREF="../../../../com/chartboost/sdk/Analytics/CBAnalytics.html" title="class in com.chartboost.sdk.Analytics">CBAnalytics</A></CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../com/chartboost/sdk/Analytics/CBAnalytics.html#sharedAnalytics()">sharedAnalytics</A></B>()</CODE>
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/chartboost/sdk/Model/CBError.html#getErrorDesc()">getErrorDesc</A></B>()</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the singleton analytics object.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;java.lang.Boolean</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../com/chartboost/sdk/Analytics/CBAnalytics.html#trackEvent(java.lang.String)">trackEvent</A></B>(java.lang.String&nbsp;eventIdentifier)</CODE>
+<CODE>&nbsp;<A HREF="../../../../com/chartboost/sdk/Model/CBError.CBImpressionError.html" title="enum in com.chartboost.sdk.Model">CBError.CBImpressionError</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/chartboost/sdk/Model/CBError.html#getImpressionError()">getImpressionError</A></B>()</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tracks an event.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;java.lang.Boolean</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../com/chartboost/sdk/Analytics/CBAnalytics.html#trackEvent(java.lang.String, double)">trackEvent</A></B>(java.lang.String&nbsp;eventIdentifier,
-           double&nbsp;value)</CODE>
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/chartboost/sdk/Model/CBError.html#isRecoverable()">isRecoverable</A></B>()</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tracks an event with a value.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;java.lang.Boolean</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../com/chartboost/sdk/Analytics/CBAnalytics.html#trackEvent(java.lang.String, double, java.lang.Object)">trackEvent</A></B>(java.lang.String&nbsp;eventIdentifier,
-           double&nbsp;value,
-           java.lang.Object&nbsp;meta)</CODE>
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/chartboost/sdk/Model/CBError.html#setRecoverable(boolean)">setRecoverable</A></B>(boolean&nbsp;isRecoverable)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tracks an event with a value and additional metadata.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
@@ -188,23 +213,22 @@ java.lang.Object
 &nbsp;
 <P>
 
-<!-- ============ FIELD DETAIL =========== -->
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
 
-<A NAME="field_detail"><!-- --></A>
+<A NAME="constructor_detail"><!-- --></A>
 <TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
 <TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
 <TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
-<B>Field Detail</B></FONT></TH>
+<B>Constructor Detail</B></FONT></TH>
 </TR>
 </TABLE>
 
-<A NAME="TAG"><!-- --></A><H3>
-TAG</H3>
+<A NAME="CBError(com.chartboost.sdk.Model.CBError.CBInternalError, java.lang.String)"><!-- --></A><H3>
+CBError</H3>
 <PRE>
-public static final java.lang.String <B>TAG</B></PRE>
+public <B>CBError</B>(<A HREF="../../../../com/chartboost/sdk/Model/CBError.CBInternalError.html" title="enum in com.chartboost.sdk.Model">CBError.CBInternalError</A>&nbsp;error,
+               java.lang.String&nbsp;errorDesc)</PRE>
 <DL>
-<DL>
-<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.chartboost.sdk.Analytics.CBAnalytics.TAG">Constant Field Values</A></DL>
 </DL>
 
 <!-- ============ METHOD DETAIL ========== -->
@@ -217,75 +241,55 @@ public static final java.lang.String <B>TAG</B></PRE>
 </TR>
 </TABLE>
 
-<A NAME="sharedAnalytics()"><!-- --></A><H3>
-sharedAnalytics</H3>
+<A NAME="getError()"><!-- --></A><H3>
+getError</H3>
 <PRE>
-public static <A HREF="../../../../com/chartboost/sdk/Analytics/CBAnalytics.html" title="class in com.chartboost.sdk.Analytics">CBAnalytics</A> <B>sharedAnalytics</B>()</PRE>
+public <A HREF="../../../../com/chartboost/sdk/Model/CBError.CBInternalError.html" title="enum in com.chartboost.sdk.Model">CBError.CBInternalError</A> <B>getError</B>()</PRE>
 <DL>
-<DD>Get the singleton analytics object.
-<P>
 <DD><DL>
 </DL>
 </DD>
 </DL>
 <HR>
 
-<A NAME="recordPaymentTransaction(java.lang.String, java.lang.String, double, java.lang.String, int, java.lang.Object)"><!-- --></A><H3>
-recordPaymentTransaction</H3>
+<A NAME="getErrorDesc()"><!-- --></A><H3>
+getErrorDesc</H3>
 <PRE>
-public java.lang.Boolean <B>recordPaymentTransaction</B>(java.lang.String&nbsp;sku,
-                                                  java.lang.String&nbsp;title,
-                                                  double&nbsp;price,
-                                                  java.lang.String&nbsp;currency,
-                                                  int&nbsp;quantity,
-                                                  java.lang.Object&nbsp;meta)</PRE>
+public java.lang.String <B>getErrorDesc</B>()</PRE>
 <DL>
-<DD>Record a payment transaction. If given, the metadata must be either
-  a <code>JSONObject</code> or a <code>Map&lt;String,Object&gt;</code>.
-<P>
 <DD><DL>
 </DL>
 </DD>
 </DL>
 <HR>
 
-<A NAME="trackEvent(java.lang.String)"><!-- --></A><H3>
-trackEvent</H3>
+<A NAME="getImpressionError()"><!-- --></A><H3>
+getImpressionError</H3>
 <PRE>
-public java.lang.Boolean <B>trackEvent</B>(java.lang.String&nbsp;eventIdentifier)</PRE>
+public <A HREF="../../../../com/chartboost/sdk/Model/CBError.CBImpressionError.html" title="enum in com.chartboost.sdk.Model">CBError.CBImpressionError</A> <B>getImpressionError</B>()</PRE>
 <DL>
-<DD>Tracks an event.
-<P>
 <DD><DL>
 </DL>
 </DD>
 </DL>
 <HR>
 
-<A NAME="trackEvent(java.lang.String, double)"><!-- --></A><H3>
-trackEvent</H3>
+<A NAME="isRecoverable()"><!-- --></A><H3>
+isRecoverable</H3>
 <PRE>
-public java.lang.Boolean <B>trackEvent</B>(java.lang.String&nbsp;eventIdentifier,
-                                    double&nbsp;value)</PRE>
+public boolean <B>isRecoverable</B>()</PRE>
 <DL>
-<DD>Tracks an event with a value.
-<P>
 <DD><DL>
 </DL>
 </DD>
 </DL>
 <HR>
 
-<A NAME="trackEvent(java.lang.String, double, java.lang.Object)"><!-- --></A><H3>
-trackEvent</H3>
+<A NAME="setRecoverable(boolean)"><!-- --></A><H3>
+setRecoverable</H3>
 <PRE>
-public java.lang.Boolean <B>trackEvent</B>(java.lang.String&nbsp;eventIdentifier,
-                                    double&nbsp;value,
-                                    java.lang.Object&nbsp;meta)</PRE>
+public void <B>setRecoverable</B>(boolean&nbsp;isRecoverable)</PRE>
 <DL>
-<DD>Tracks an event with a value and additional metadata. If given,
-  the metadata must be either a <code>JSONObject</code> or a <code>Map&lt;String,Object&gt;</code>.
-<P>
 <DD><DL>
 </DL>
 </DD>
@@ -321,10 +325,10 @@ public java.lang.Boolean <B>trackEvent</B>(java.lang.String&nbsp;eventIdentifier
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
 &nbsp;PREV CLASS&nbsp;
-&nbsp;NEXT CLASS</FONT></TD>
+&nbsp;<A HREF="../../../../com/chartboost/sdk/Model/CBError.CBClickError.html" title="enum in com.chartboost.sdk.Model"><B>NEXT CLASS</B></A></FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
-  <A HREF="../../../../index.html?com/chartboost/sdk/Analytics/CBAnalytics.html" target="_top"><B>FRAMES</B></A>  &nbsp;
-&nbsp;<A HREF="CBAnalytics.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+  <A HREF="../../../../index.html?com/chartboost/sdk/Model/CBError.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="CBError.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
 &nbsp;<SCRIPT type="text/javascript">
   <!--
   if(window==top) {
@@ -341,9 +345,9 @@ public java.lang.Boolean <B>trackEvent</B>(java.lang.String&nbsp;eventIdentifier
 </TR>
 <TR>
 <TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
-  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+  SUMMARY:&nbsp;<A HREF="#nested_class_summary">NESTED</A>&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
 <TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
-DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
 </TR>
 </TABLE>
 <A NAME="skip-navbar_bottom"></A>

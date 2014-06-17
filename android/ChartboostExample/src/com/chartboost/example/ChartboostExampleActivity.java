@@ -1,7 +1,5 @@
 package com.chartboost.example;
 
-import java.util.HashMap;
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
@@ -12,8 +10,10 @@ import android.provider.Settings.Secure;
 
 // Import the Chartboost SDK
 import com.chartboost.sdk.Chartboost;
+import com.chartboost.sdk.Chartboost.CBAgeGateConfirmation;
 import com.chartboost.sdk.ChartboostDelegate;
-import com.chartboost.sdk.Analytics.CBAnalytics;
+import com.chartboost.sdk.Model.CBError.CBClickError;
+import com.chartboost.sdk.Model.CBError.CBImpressionError;
 
 public class ChartboostExampleActivity extends Activity {
 
@@ -68,16 +68,11 @@ public class ChartboostExampleActivity extends Activity {
 		 */
 		//this.cb.setImpressionsUseActivities(true);
 		
-		/*
-		 * Notify the beginning of a user session
-		 * 
-		 * You may place cb.startSession() in onCreate(), onStart(), or onResume()
-		 */
-		this.cb.startSession();
-		
 		//Pro Tip: Use code below to print Android ID in log:
 		String android_id = Secure.getString(getBaseContext().getContentResolver(),Secure.ANDROID_ID);
 		Log.e(TAG, android_id);
+		
+		this.cb.showInterstitial();
 
 	}
 
@@ -206,7 +201,7 @@ public class ChartboostExampleActivity extends Activity {
 		}
 
 		/*
-		 * didFailToLoadInterstitial(String location)
+		 * didFailToLoadInterstitial(String location, CBImpressionError error)
 		 * 
 		 * This is called when an interstitial has failed to load for any reason
 		 * 
@@ -214,15 +209,14 @@ public class ChartboostExampleActivity extends Activity {
 		 * - cacheInterstitial() failure
 		 * - showInterstitial() failure if no interstitial was cached
 		 * 
-		 * Possible reasons:
-		 * - No network connection
-		 * - No publishing campaign matches for this user (go make a new one in the dashboard)
+		 * Notes:
+		 * - Please refer to to CBError.CBImpressionError.html in the sdk doc folder
 		 */
 		@Override
-		public void didFailToLoadInterstitial(String location) {
+		public void didFailToLoadInterstitial(String location, CBImpressionError error) {
 		    // Show a house ad or do something else when a chartboost interstitial fails to load
-
-			Log.i(TAG, "INTERSTITIAL '"+location+"' REQUEST FAILED");
+			
+			Log.i(TAG, "INTERSTITIAL '"+location+"' REQUEST FAILED - " + error.name());
 			Toast.makeText(ChartboostExampleActivity.this, "Interstitial '"+location+"' Load Failed",
 					Toast.LENGTH_SHORT).show();
 		}
@@ -291,27 +285,24 @@ public class ChartboostExampleActivity extends Activity {
 		public void didShowInterstitial(String location) {
 			Log.i(TAG, "INTERSTITIAL '" + location + "' SHOWN");
 		}
-		
-		/*
-		 * didFailToLoadURL(String location)
-		 * 
-		 * This is called when a url after a click has failed to load for any reason
-		 *
+
+	    /*
+	     * didFailToRecordClick(String url)
+	     *
+	     * This is called when our click API fails to respond
+	     *
 		 * Is fired on:
 		 * - Interstitial click
 		 * - More-Apps click
 		 * 
-		 * Possible reasons:
-		 * - No network connection
-		 * - no valid activity to launch
-		 * - unable to parse url
-		 */
+		 * Notes:
+		 * - Please refer to to CBError.CBClickError.html in the sdk doc folder
+	     */
 		@Override
-		public void didFailToLoadUrl(String url) {
-		    // Show a house ad or do something else when a chartboost interstitial fails to load
+		public void didFailToRecordClick(String uri, CBClickError error) {
 
-			Log.i(TAG, "URL '"+url+"' REQUEST FAILED");
-			Toast.makeText(ChartboostExampleActivity.this, "URL '"+url+"' Load Failed",
+			Log.i(TAG, "FAILED TO RECORD CLICK " + (uri != null ? uri : "null") + ", error: " + error.name());
+			Toast.makeText(ChartboostExampleActivity.this, "URL '"+uri+"' Click Failed",
 					Toast.LENGTH_SHORT).show();
 		}
 
@@ -371,15 +362,15 @@ public class ChartboostExampleActivity extends Activity {
 		 * - cacheMoreApps() failure
 		 * - showMoreApps() failure if no More-Apps page was cached
 		 * 
-		 * Possible reasons:
-		 * - No network connection
-		 * - No publishing campaign matches for this user (go make a new one in the dashboard)
+		 * Notes:
+		 * - Please refer to to CBError.CBImpressionError.html in the sdk doc folder
 		 */
 		@Override
-		public void didFailToLoadMoreApps() {
-			Log.i(TAG, "MORE APPS REQUEST FAILED");
+		public void didFailToLoadMoreApps(CBImpressionError error) {
+			Log.i(TAG, "MORE APPS REQUEST FAILED - " + error.name());
 			Toast.makeText(ChartboostExampleActivity.this, "More Apps Load Failed",
 					Toast.LENGTH_SHORT).show();
+			
 		}
 
 		/*
@@ -462,6 +453,13 @@ public class ChartboostExampleActivity extends Activity {
 		@Override
 		public boolean shouldRequestInterstitialsInFirstSession() {
 			return true;
+		}
+
+		@Override
+		public boolean shouldPauseClickForConfirmation(
+				CBAgeGateConfirmation callback) {
+			// TODO Auto-generated method stub
+			return false;
 		}
 	};
 	

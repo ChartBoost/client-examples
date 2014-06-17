@@ -82,8 +82,35 @@ function windowTitle()
 </CENTER>
 <HR SIZE="4" NOSHADE>
 <B>Contents</B><UL>
+<LI><A HREF="#method">Deprecated Methods</A>
 </UL>
 
+<A NAME="method"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Deprecated Methods</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><A HREF="com/chartboost/sdk/Chartboost.html#clearImageCache()">com.chartboost.sdk.Chartboost.clearImageCache()</A>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<I>Please use clearCache() method, which will clear all impression and image caches.</I>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><A HREF="com/chartboost/sdk/Chartboost.html#setFramework(java.lang.String)">com.chartboost.sdk.Chartboost.setFramework(String)</A>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<I>Use <A HREF="com/chartboost/sdk/CBPreferences.html#setUserAgentSuffix(java.lang.String)"><CODE>CBPreferences.setUserAgentSuffix(String)</CODE></A>.<br /><br />
+ If you are creating a wrapper of the Chartboost SDK, use this to set a short name for your framework
+ for analytics purposes. Use null for the default value, the "native" Android framework.</I>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><A HREF="com/chartboost/sdk/Chartboost.html#startSession()">com.chartboost.sdk.Chartboost.startSession()</A>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<I>You don't need to call start session anymore, SDK will internally perform this call.</I>&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
 <HR>
 
 

@@ -52,8 +52,8 @@ function windowTitle()
 
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
-&nbsp;<A HREF="../../../com/chartboost/sdk/CBImpressionActivity.html" title="class in com.chartboost.sdk"><B>PREV CLASS</B></A>&nbsp;
-&nbsp;<A HREF="../../../com/chartboost/sdk/Chartboost.CBAPIResponseCallback.html" title="interface in com.chartboost.sdk"><B>NEXT CLASS</B></A></FONT></TD>
+&nbsp;<A HREF="../../../com/chartboost/sdk/CBPreferences.html" title="class in com.chartboost.sdk"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../com/chartboost/sdk/Chartboost.CBAgeGateConfirmation.html" title="interface in com.chartboost.sdk"><B>NEXT CLASS</B></A></FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
   <A HREF="../../../index.html?com/chartboost/sdk/Chartboost.html" target="_top"><B>FRAMES</B></A>  &nbsp;
 &nbsp;<A HREF="Chartboost.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
@@ -112,10 +112,26 @@ java.lang.Object
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>static&nbsp;interface</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/chartboost/sdk/Chartboost.CBAgeGateConfirmation.html" title="interface in com.chartboost.sdk">Chartboost.CBAgeGateConfirmation</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Interface for the AgeGate callback</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;interface</CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../com/chartboost/sdk/Chartboost.CBAPIResponseCallback.html" title="interface in com.chartboost.sdk">Chartboost.CBAPIResponseCallback</A></B></CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Interface for the NT=etwork  callback</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;interface</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/chartboost/sdk/Chartboost.CBPostConfigCallback.html" title="interface in com.chartboost.sdk">Chartboost.CBPostConfigCallback</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Use this as a callback to execute once we get response from the ConfigSystem</TD>
 </TR>
 </TABLE>
 &nbsp;
@@ -166,40 +182,7 @@ java.lang.Object
 <TD><CODE><B><A HREF="../../../com/chartboost/sdk/Chartboost.html#clearImageCache()">clearImageCache</A></B>()</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Clear any images Chartboost downloaded that are cached in memory or on disk.</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;<A HREF="../../../com/chartboost/sdk/Analytics/CBAnalytics.html" title="class in com.chartboost.sdk.Analytics">CBAnalytics</A></CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../com/chartboost/sdk/Chartboost.html#getAnalytics()">getAnalytics</A></B>()</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Retrieve the Chartboost analytics manager.</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;boolean</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../com/chartboost/sdk/Chartboost.html#getAnimationsOff()">getAnimationsOff</A></B>()</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Return whether or not animations for showing/hiding interstitials
-  and the more apps page are skipped (see <A HREF="../../../com/chartboost/sdk/Chartboost.html#setAnimationsOff(boolean)"><CODE>setAnimationsOff(boolean)</CODE></A>).</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../com/chartboost/sdk/Chartboost.html#getAppID()">getAppID</A></B>()</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the app ID string currently used by Chartboost</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../com/chartboost/sdk/Chartboost.html#getAppSignature()">getAppSignature</A></B>()</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This directly returns the app signature string currently used by Chartboost.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>Please use clearCache() method, which will clear all impression and image caches.</I></TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -211,70 +194,19 @@ java.lang.Object
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;<A HREF="../../../com/chartboost/sdk/ChartboostDelegate.html" title="interface in com.chartboost.sdk">ChartboostDelegate</A></CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../com/chartboost/sdk/Chartboost.html#getDelegate()">getDelegate</A></B>()</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This directly returns the delegate object currently used by Chartboost.</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;<A HREF="../../../com/chartboost/sdk/Libraries/CBOrientation.Difference.html" title="enum in com.chartboost.sdk.Libraries">CBOrientation.Difference</A></CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../com/chartboost/sdk/Chartboost.html#getForcedOrientationDifference()">getForcedOrientationDifference</A></B>()</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The angular difference between the actual orientation of the device
- and the orientation at which impressions will be displayed.</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;java.lang.String</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../com/chartboost/sdk/Chartboost.html#getFramework()">getFramework</A></B>()</CODE>
+<TD><CODE><B><A HREF="../../../com/chartboost/sdk/Chartboost.html#getDeviceIdentifier()">getDeviceIdentifier</A></B>()</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the custom framework name set in <A HREF="../../../com/chartboost/sdk/Chartboost.html#setFramework(java.lang.String)"><CODE>setFramework(String)</CODE></A>, if any.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the device identifier for internal testing purposes</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;android.os.Handler</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../com/chartboost/sdk/Chartboost.html#getHandler()">getHandler</A></B>()</CODE>
+<CODE>&nbsp;<A HREF="../../../com/chartboost/sdk/CBPreferences.html" title="class in com.chartboost.sdk">CBPreferences</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/chartboost/sdk/Chartboost.html#getPreferences()">getPreferences</A></B>()</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get a general-use handler from the main looper thread (or whatever thread Chartboost was loaded on).</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;boolean</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../com/chartboost/sdk/Chartboost.html#getIgnoreErrors()">getIgnoreErrors</A></B>()</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns whether certain exceptions from improper SDK use are being
- ignored.</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;boolean</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../com/chartboost/sdk/Chartboost.html#getImpressionsUseActivities()">getImpressionsUseActivities</A></B>()</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns whether or not impressions will be displayed in a separate activity
-  (true), or in a view at the front of the host activity (false).</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;<A HREF="../../../com/chartboost/sdk/Libraries/CBOrientation.html" title="enum in com.chartboost.sdk.Libraries">CBOrientation</A></CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../com/chartboost/sdk/Chartboost.html#getOrientation()">getOrientation</A></B>()</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The device's orientation, or the orientation that is overriding that via <A HREF="../../../com/chartboost/sdk/Chartboost.html#setOrientation(com.chartboost.sdk.Libraries.CBOrientation)"><CODE>setOrientation(CBOrientation)</CODE></A></TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;int</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../com/chartboost/sdk/Chartboost.html#getTimeout()">getTimeout</A></B>()</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the number of milliseconds after which to timeout API requests.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Retrieve the Chartboost preferences manager.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -302,11 +234,11 @@ java.lang.Object
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;boolean</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../com/chartboost/sdk/Chartboost.html#isIdentityTrackingDisabledOnThisDevice()">isIdentityTrackingDisabledOnThisDevice</A></B>()</CODE>
+<CODE>static&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/chartboost/sdk/Chartboost.html#isSessionStarted()">isSessionStarted</A></B>()</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Determine whether identity tracking is currently being disabled.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Method to check if the Chartboost session is active</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -358,88 +290,12 @@ java.lang.Object
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../com/chartboost/sdk/Chartboost.html#setAnimationsOff(boolean)">setAnimationsOff</A></B>(boolean&nbsp;animationsOff)</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets whether or not to skip animations for showing/hiding interstitials and the more apps page.</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../com/chartboost/sdk/Chartboost.html#setAppID(java.lang.String)">setAppID</A></B>(java.lang.String&nbsp;appId)</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;WARNING: usually you should just use <A HREF="../../../com/chartboost/sdk/Chartboost.html#onCreate(android.app.Activity, java.lang.String, java.lang.String, com.chartboost.sdk.ChartboostDelegate)"><CODE>onCreate(Activity, String, String, ChartboostDelegate)</CODE></A> 
- for the functionality provided by this method.</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../com/chartboost/sdk/Chartboost.html#setAppSignature(java.lang.String)">setAppSignature</A></B>(java.lang.String&nbsp;appSignature)</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;WARNING: usually you should just use <A HREF="../../../com/chartboost/sdk/Chartboost.html#onCreate(android.app.Activity, java.lang.String, java.lang.String, com.chartboost.sdk.ChartboostDelegate)"><CODE>onCreate(Activity, String, String, ChartboostDelegate)</CODE></A> 
- for the functionality provided by this method.</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../com/chartboost/sdk/Chartboost.html#setDelegate(com.chartboost.sdk.ChartboostDelegate)">setDelegate</A></B>(<A HREF="../../../com/chartboost/sdk/ChartboostDelegate.html" title="interface in com.chartboost.sdk">ChartboostDelegate</A>&nbsp;delegate)</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;WARNING: usually you should just use <A HREF="../../../com/chartboost/sdk/Chartboost.html#onCreate(android.app.Activity, java.lang.String, java.lang.String, com.chartboost.sdk.ChartboostDelegate)"><CODE>onCreate(Activity, String, String, ChartboostDelegate)</CODE></A> 
- for the functionality provided by this method.</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;void</CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../com/chartboost/sdk/Chartboost.html#setFramework(java.lang.String)">setFramework</A></B>(java.lang.String&nbsp;framework)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If you are creating a wrapper of the Chartboost SDK, use this to set a short name for your framework
- for analytics purposes.</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../com/chartboost/sdk/Chartboost.html#setIdentityTrackingDisabledOnThisDevice(boolean)">setIdentityTrackingDisabledOnThisDevice</A></B>(boolean&nbsp;disabled)</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Disables identity tracking for this device.</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../com/chartboost/sdk/Chartboost.html#setIgnoreErrors(boolean)">setIgnoreErrors</A></B>(boolean&nbsp;ignoreErrors)</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Normally, exceptions are thrown when calling certain implementation methods
-  (such as <A HREF="../../../com/chartboost/sdk/Chartboost.html#onCreate(android.app.Activity, java.lang.String, java.lang.String, com.chartboost.sdk.ChartboostDelegate)"><CODE>onCreate(android.app.Activity, java.lang.String, java.lang.String, com.chartboost.sdk.ChartboostDelegate)</CODE></A>) from the wrong thread.</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../com/chartboost/sdk/Chartboost.html#setImpressionsUseActivities(boolean)">setImpressionsUseActivities</A></B>(boolean&nbsp;impressionsUseActivities)</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set whether or not to launch interstitials and the More Apps page in their own
-  activity.</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../com/chartboost/sdk/Chartboost.html#setOrientation(com.chartboost.sdk.Libraries.CBOrientation)">setOrientation</A></B>(<A HREF="../../../com/chartboost/sdk/Libraries/CBOrientation.html" title="enum in com.chartboost.sdk.Libraries">CBOrientation</A>&nbsp;_orientation)</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Override the detected device orientation with a manual choice.</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../com/chartboost/sdk/Chartboost.html#setTimeout(int)">setTimeout</A></B>(int&nbsp;timeout)</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set the number of milliseconds after which to timeout API requests.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>Use <A HREF="../../../com/chartboost/sdk/CBPreferences.html#setUserAgentSuffix(java.lang.String)"><CODE>CBPreferences.setUserAgentSuffix(String)</CODE></A>.<br /><br />
+ If you are creating a wrapper of the Chartboost SDK, use this to set a short name for your framework
+ for analytics purposes. Use null for the default value, the "native" Android framework.</I></TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -447,7 +303,7 @@ java.lang.Object
 <TD><CODE><B><A HREF="../../../com/chartboost/sdk/Chartboost.html#sharedChartboost()">sharedChartboost</A></B>()</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the singleton</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the singleton.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -489,7 +345,7 @@ java.lang.Object
 <TD><CODE><B><A HREF="../../../com/chartboost/sdk/Chartboost.html#startSession()">startSession</A></B>()</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Notify Chartboost of the beginning of a user session.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>You don't need to call start session anymore, SDK will internally perform this call.</I></TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
@@ -519,7 +375,7 @@ sharedChartboost</H3>
 <PRE>
 public static <A HREF="../../../com/chartboost/sdk/Chartboost.html" title="class in com.chartboost.sdk">Chartboost</A> <B>sharedChartboost</B>()</PRE>
 <DL>
-<DD>Get the singleton
+<DD>Get the singleton.
 <P>
 <DD><DL>
 
@@ -528,12 +384,12 @@ public static <A HREF="../../../com/chartboost/sdk/Chartboost.html" title="class
 </DL>
 <HR>
 
-<A NAME="getAnalytics()"><!-- --></A><H3>
-getAnalytics</H3>
+<A NAME="getPreferences()"><!-- --></A><H3>
+getPreferences</H3>
 <PRE>
-public <A HREF="../../../com/chartboost/sdk/Analytics/CBAnalytics.html" title="class in com.chartboost.sdk.Analytics">CBAnalytics</A> <B>getAnalytics</B>()</PRE>
+public <A HREF="../../../com/chartboost/sdk/CBPreferences.html" title="class in com.chartboost.sdk">CBPreferences</A> <B>getPreferences</B>()</PRE>
 <DL>
-<DD>Retrieve the Chartboost analytics manager.
+<DD>Retrieve the Chartboost preferences manager.
 <P>
 <DD><DL>
 </DL>
@@ -546,9 +402,7 @@ startSession</H3>
 <PRE>
 public void <B>startSession</B>()</PRE>
 <DL>
-<DD>Notify Chartboost of the beginning of a user session. Feel free to call this in your
- activity's <code>onStart</code> method, Chartboost will automatically detect if it is a configuration change
- or some other scenario that is clearly not an actualy new session.
+<DD><B>Deprecated.</B>&nbsp;<I>You don't need to call start session anymore, SDK will internally perform this call.</I>
 <P>
 <DD><DL>
 </DL>
@@ -566,6 +420,20 @@ public android.content.Context <B>getContext</B>()</PRE>
 <DD><DL>
 
 <DT><B>Returns:</B><DD>The application (NOT activity) context currently being used by Chartboost.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isSessionStarted()"><!-- --></A><H3>
+isSessionStarted</H3>
+<PRE>
+public static boolean <B>isSessionStarted</B>()</PRE>
+<DL>
+<DD>Method to check if the Chartboost session is active
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>true - chartboost session is running / false - session not running</DL>
 </DD>
 </DL>
 <HR>
@@ -647,9 +515,7 @@ clearImageCache</H3>
 <PRE>
 public void <B>clearImageCache</B>()</PRE>
 <DL>
-<DD>Clear any images Chartboost downloaded that are cached in memory or on disk.
- This is done anyway a little bit after Chartboost detects that it is no
- longer being used by any activity.
+<DD><B>Deprecated.</B>&nbsp;<I>Please use clearCache() method, which will clear all impression and image caches.</I>
 <P>
 <DD><DL>
 </DL>
@@ -804,31 +670,16 @@ public void <B>showMoreAppsData</B>(<A HREF="../../../com/chartboost/sdk/Chartbo
 </DL>
 <HR>
 
-<A NAME="getTimeout()"><!-- --></A><H3>
-getTimeout</H3>
+<A NAME="getDeviceIdentifier()"><!-- --></A><H3>
+getDeviceIdentifier</H3>
 <PRE>
-public int <B>getTimeout</B>()</PRE>
+public java.lang.String <B>getDeviceIdentifier</B>()</PRE>
 <DL>
-<DD>Get the number of milliseconds after which to timeout API requests. Default is 30000, or 30 seconds.
+<DD>Returns the device identifier for internal testing purposes
 <P>
 <DD><DL>
-</DL>
-</DD>
-</DL>
-<HR>
 
-<A NAME="setTimeout(int)"><!-- --></A><H3>
-setTimeout</H3>
-<PRE>
-public void <B>setTimeout</B>(int&nbsp;timeout)</PRE>
-<DL>
-<DD>Set the number of milliseconds after which to timeout API requests. This limit applies individually
- to both making a connection and waiting for a response, so technically (although quite unlikely) a
- request could persist for as long as twice the given timeout. Default is 30000, or 30 seconds.
- Setting this timeout will only have effect if done prior to using any of Chartboost's functionality.
-<P>
-<DD><DL>
-</DL>
+<DT><B>Returns:</B><DD>A hex string representing the user's device identifier.</DL>
 </DD>
 </DL>
 <HR>
@@ -836,287 +687,15 @@ public void <B>setTimeout</B>(int&nbsp;timeout)</PRE>
 <A NAME="setFramework(java.lang.String)"><!-- --></A><H3>
 setFramework</H3>
 <PRE>
-public void <B>setFramework</B>(java.lang.String&nbsp;framework)</PRE>
+<FONT SIZE="-1">@Deprecated
+</FONT>public void <B>setFramework</B>(java.lang.String&nbsp;framework)</PRE>
 <DL>
-<DD>If you are creating a wrapper of the Chartboost SDK, use this to set a short name for your framework
- for analytics purposes.  Use null for the default value, the "native" Android framework.
+<DD><B>Deprecated.</B>&nbsp;<I>Use <A HREF="../../../com/chartboost/sdk/CBPreferences.html#setUserAgentSuffix(java.lang.String)"><CODE>CBPreferences.setUserAgentSuffix(String)</CODE></A>.<br /><br />
+ If you are creating a wrapper of the Chartboost SDK, use this to set a short name for your framework
+ for analytics purposes. Use null for the default value, the "native" Android framework.</I>
 <P>
 <DD><DL>
-<DT><B>Parameters:</B><DD><CODE>framework</CODE> - : a short name for your framework, or null if you are not creating a wrapper library.</DL>
-</DD>
-</DL>
-<HR>
-
-<A NAME="getFramework()"><!-- --></A><H3>
-getFramework</H3>
-<PRE>
-public java.lang.String <B>getFramework</B>()</PRE>
-<DL>
-<DD>Returns the custom framework name set in <A HREF="../../../com/chartboost/sdk/Chartboost.html#setFramework(java.lang.String)"><CODE>setFramework(String)</CODE></A>, if any. Otherwise, returns "native".
-<P>
-<DD><DL>
-</DL>
-</DD>
-</DL>
-<HR>
-
-<A NAME="getAppID()"><!-- --></A><H3>
-getAppID</H3>
-<PRE>
-public java.lang.String <B>getAppID</B>()</PRE>
-<DL>
-<DD>Get the app ID string currently used by Chartboost
-<P>
-<DD><DL>
-</DL>
-</DD>
-</DL>
-<HR>
-
-<A NAME="setAppID(java.lang.String)"><!-- --></A><H3>
-setAppID</H3>
-<PRE>
-public void <B>setAppID</B>(java.lang.String&nbsp;appId)</PRE>
-<DL>
-<DD>WARNING: usually you should just use <A HREF="../../../com/chartboost/sdk/Chartboost.html#onCreate(android.app.Activity, java.lang.String, java.lang.String, com.chartboost.sdk.ChartboostDelegate)"><CODE>onCreate(Activity, String, String, ChartboostDelegate)</CODE></A> 
- for the functionality provided by this method. This directly sets the app ID string currently used by Chartboost.
-<P>
-<DD><DL>
-</DL>
-</DD>
-</DL>
-<HR>
-
-<A NAME="getAppSignature()"><!-- --></A><H3>
-getAppSignature</H3>
-<PRE>
-public java.lang.String <B>getAppSignature</B>()</PRE>
-<DL>
-<DD>This directly returns the app signature string currently used by Chartboost.
-<P>
-<DD><DL>
-</DL>
-</DD>
-</DL>
-<HR>
-
-<A NAME="setAppSignature(java.lang.String)"><!-- --></A><H3>
-setAppSignature</H3>
-<PRE>
-public void <B>setAppSignature</B>(java.lang.String&nbsp;appSignature)</PRE>
-<DL>
-<DD>WARNING: usually you should just use <A HREF="../../../com/chartboost/sdk/Chartboost.html#onCreate(android.app.Activity, java.lang.String, java.lang.String, com.chartboost.sdk.ChartboostDelegate)"><CODE>onCreate(Activity, String, String, ChartboostDelegate)</CODE></A> 
- for the functionality provided by this method. This directly sets the app signature string currently used by Chartboost.
-<P>
-<DD><DL>
-</DL>
-</DD>
-</DL>
-<HR>
-
-<A NAME="getDelegate()"><!-- --></A><H3>
-getDelegate</H3>
-<PRE>
-public <A HREF="../../../com/chartboost/sdk/ChartboostDelegate.html" title="interface in com.chartboost.sdk">ChartboostDelegate</A> <B>getDelegate</B>()</PRE>
-<DL>
-<DD>This directly returns the delegate object currently used by Chartboost.
-<P>
-<DD><DL>
-</DL>
-</DD>
-</DL>
-<HR>
-
-<A NAME="setDelegate(com.chartboost.sdk.ChartboostDelegate)"><!-- --></A><H3>
-setDelegate</H3>
-<PRE>
-public void <B>setDelegate</B>(<A HREF="../../../com/chartboost/sdk/ChartboostDelegate.html" title="interface in com.chartboost.sdk">ChartboostDelegate</A>&nbsp;delegate)</PRE>
-<DL>
-<DD>WARNING: usually you should just use <A HREF="../../../com/chartboost/sdk/Chartboost.html#onCreate(android.app.Activity, java.lang.String, java.lang.String, com.chartboost.sdk.ChartboostDelegate)"><CODE>onCreate(Activity, String, String, ChartboostDelegate)</CODE></A> 
- for the functionality provided by this method. This directly sets the delegate object used by Chartboost.
-<P>
-<DD><DL>
-</DL>
-</DD>
-</DL>
-<HR>
-
-<A NAME="getHandler()"><!-- --></A><H3>
-getHandler</H3>
-<PRE>
-public android.os.Handler <B>getHandler</B>()</PRE>
-<DL>
-<DD>Get a general-use handler from the main looper thread (or whatever thread Chartboost was loaded on).
-<P>
-<DD><DL>
-</DL>
-</DD>
-</DL>
-<HR>
-
-<A NAME="getImpressionsUseActivities()"><!-- --></A><H3>
-getImpressionsUseActivities</H3>
-<PRE>
-public boolean <B>getImpressionsUseActivities</B>()</PRE>
-<DL>
-<DD>Returns whether or not impressions will be displayed in a separate activity
-  (true), or in a view at the front of the host activity (false).
-<P>
-<DD><DL>
-</DL>
-</DD>
-</DL>
-<HR>
-
-<A NAME="setImpressionsUseActivities(boolean)"><!-- --></A><H3>
-setImpressionsUseActivities</H3>
-<PRE>
-public void <B>setImpressionsUseActivities</B>(boolean&nbsp;impressionsUseActivities)</PRE>
-<DL>
-<DD>Set whether or not to launch interstitials and the More Apps page in their own
-  activity. This is required for Chartboost to work with a NativeActivity. It 
-  may also be a more optimal solution for certain engines, such as Unity.
-  Please use care, as the onPause-onStop/onStart-onResume cycle will be called
-  for the originating activity when showing and hiding the impressions.
- If false (default behavior), impressions will be displayed in a view above the
-  other content views in your host activity.
-<P>
-<DD><DL>
-</DL>
-</DD>
-</DL>
-<HR>
-
-<A NAME="getIgnoreErrors()"><!-- --></A><H3>
-getIgnoreErrors</H3>
-<PRE>
-public boolean <B>getIgnoreErrors</B>()</PRE>
-<DL>
-<DD>Returns whether certain exceptions from improper SDK use are being
- ignored. See <A HREF="../../../com/chartboost/sdk/Chartboost.html#setIgnoreErrors(boolean)"><CODE>setIgnoreErrors(boolean)</CODE></A> for more information.
-<P>
-<DD><DL>
-</DL>
-</DD>
-</DL>
-<HR>
-
-<A NAME="setIgnoreErrors(boolean)"><!-- --></A><H3>
-setIgnoreErrors</H3>
-<PRE>
-public void <B>setIgnoreErrors</B>(boolean&nbsp;ignoreErrors)</PRE>
-<DL>
-<DD>Normally, exceptions are thrown when calling certain implementation methods
-  (such as <A HREF="../../../com/chartboost/sdk/Chartboost.html#onCreate(android.app.Activity, java.lang.String, java.lang.String, com.chartboost.sdk.ChartboostDelegate)"><CODE>onCreate(android.app.Activity, java.lang.String, java.lang.String, com.chartboost.sdk.ChartboostDelegate)</CODE></A>) from the wrong thread. Call this method with
-  a true input to suppress those exceptions, but only if you have a REALLY
-  good reason to do this.
-<P>
-<DD><DL>
-<DT><B>Parameters:</B><DD><CODE>ignoreErrors</CODE> - : true to suppress exceptions for certain improper
-        implementations</DL>
-</DD>
-</DL>
-<HR>
-
-<A NAME="getAnimationsOff()"><!-- --></A><H3>
-getAnimationsOff</H3>
-<PRE>
-public boolean <B>getAnimationsOff</B>()</PRE>
-<DL>
-<DD>Return whether or not animations for showing/hiding interstitials
-  and the more apps page are skipped (see <A HREF="../../../com/chartboost/sdk/Chartboost.html#setAnimationsOff(boolean)"><CODE>setAnimationsOff(boolean)</CODE></A>).
-<P>
-<DD><DL>
-
-<DT><B>Returns:</B><DD>If true, animations are not being used for impressions.</DL>
-</DD>
-</DL>
-<HR>
-
-<A NAME="setAnimationsOff(boolean)"><!-- --></A><H3>
-setAnimationsOff</H3>
-<PRE>
-public void <B>setAnimationsOff</B>(boolean&nbsp;animationsOff)</PRE>
-<DL>
-<DD>Sets whether or not to skip animations for showing/hiding interstitials and the more apps page.
-<P>
-<DD><DL>
-<DT><B>Parameters:</B><DD><CODE>animationsOff</CODE> - : If true, don't use animations for impressions.</DL>
-</DD>
-</DL>
-<HR>
-
-<A NAME="setIdentityTrackingDisabledOnThisDevice(boolean)"><!-- --></A><H3>
-setIdentityTrackingDisabledOnThisDevice</H3>
-<PRE>
-public void <B>setIdentityTrackingDisabledOnThisDevice</B>(boolean&nbsp;disabled)</PRE>
-<DL>
-<DD>Disables identity tracking for this device. This property is persistent
- -- it will stick around across sessions.
-<P>
-<DD><DL>
-<DT><B>Parameters:</B><DD><CODE>disabled</CODE> - : true to disable identity tracking</DL>
-</DD>
-</DL>
-<HR>
-
-<A NAME="isIdentityTrackingDisabledOnThisDevice()"><!-- --></A><H3>
-isIdentityTrackingDisabledOnThisDevice</H3>
-<PRE>
-public boolean <B>isIdentityTrackingDisabledOnThisDevice</B>()</PRE>
-<DL>
-<DD>Determine whether identity tracking is currently being disabled. This
- property is persistent -- it will stick around across sessions.
-<P>
-<DD><DL>
-
-<DT><B>Returns:</B><DD>true if identity tracking is currently disabled</DL>
-</DD>
-</DL>
-<HR>
-
-<A NAME="setOrientation(com.chartboost.sdk.Libraries.CBOrientation)"><!-- --></A><H3>
-setOrientation</H3>
-<PRE>
-public void <B>setOrientation</B>(<A HREF="../../../com/chartboost/sdk/Libraries/CBOrientation.html" title="enum in com.chartboost.sdk.Libraries">CBOrientation</A>&nbsp;_orientation)</PRE>
-<DL>
-<DD>Override the detected device orientation with a manual choice.
- This changes the orientation at which impressions are shown.
-<P>
-<DD><DL>
-<DT><B>Parameters:</B><DD><CODE>_orientation</CODE> - : the orientation to force, or <A HREF="../../../com/chartboost/sdk/Libraries/CBOrientation.html#UNSPECIFIED"><CODE>CBOrientation.UNSPECIFIED</CODE></A>
-        to stop overriding the detected orientation</DL>
-</DD>
-</DL>
-<HR>
-
-<A NAME="getOrientation()"><!-- --></A><H3>
-getOrientation</H3>
-<PRE>
-public <A HREF="../../../com/chartboost/sdk/Libraries/CBOrientation.html" title="enum in com.chartboost.sdk.Libraries">CBOrientation</A> <B>getOrientation</B>()</PRE>
-<DL>
-<DD>The device's orientation, or the orientation that is overriding that via <A HREF="../../../com/chartboost/sdk/Chartboost.html#setOrientation(com.chartboost.sdk.Libraries.CBOrientation)"><CODE>setOrientation(CBOrientation)</CODE></A>
-<P>
-<DD><DL>
-
-<DT><B>Returns:</B><DD>a <A HREF="../../../com/chartboost/sdk/Libraries/CBOrientation.html" title="enum in com.chartboost.sdk.Libraries"><CODE>CBOrientation</CODE></A> object representing the orientation</DL>
-</DD>
-</DL>
-<HR>
-
-<A NAME="getForcedOrientationDifference()"><!-- --></A><H3>
-getForcedOrientationDifference</H3>
-<PRE>
-public <A HREF="../../../com/chartboost/sdk/Libraries/CBOrientation.Difference.html" title="enum in com.chartboost.sdk.Libraries">CBOrientation.Difference</A> <B>getForcedOrientationDifference</B>()</PRE>
-<DL>
-<DD>The angular difference between the actual orientation of the device
- and the orientation at which impressions will be displayed.
- Normally this would be 0, but overriding via <A HREF="../../../com/chartboost/sdk/Chartboost.html#setOrientation(com.chartboost.sdk.Libraries.CBOrientation)"><CODE>setOrientation(CBOrientation)</CODE></A>
- may change this.
-<P>
-<DD><DL>
-
-<DT><B>Returns:</B><DD>a <A HREF="../../../com/chartboost/sdk/Libraries/CBOrientation.Difference.html" title="enum in com.chartboost.sdk.Libraries"><CODE>CBOrientation.Difference</CODE></A> object representing the angle difference</DL>
+<DT><B>Parameters:</B><DD><CODE>framework</CODE> - : a short name for your framework, such as "unity", or null if you are not creating a wrapper library.</DL>
 </DD>
 </DL>
 <!-- ========= END OF CLASS DATA ========= -->
@@ -1149,8 +728,8 @@ public <A HREF="../../../com/chartboost/sdk/Libraries/CBOrientation.Difference.h
 
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
-&nbsp;<A HREF="../../../com/chartboost/sdk/CBImpressionActivity.html" title="class in com.chartboost.sdk"><B>PREV CLASS</B></A>&nbsp;
-&nbsp;<A HREF="../../../com/chartboost/sdk/Chartboost.CBAPIResponseCallback.html" title="interface in com.chartboost.sdk"><B>NEXT CLASS</B></A></FONT></TD>
+&nbsp;<A HREF="../../../com/chartboost/sdk/CBPreferences.html" title="class in com.chartboost.sdk"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../com/chartboost/sdk/Chartboost.CBAgeGateConfirmation.html" title="interface in com.chartboost.sdk"><B>NEXT CLASS</B></A></FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
   <A HREF="../../../index.html?com/chartboost/sdk/Chartboost.html" target="_top"><B>FRAMES</B></A>  &nbsp;
 &nbsp;<A HREF="Chartboost.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
