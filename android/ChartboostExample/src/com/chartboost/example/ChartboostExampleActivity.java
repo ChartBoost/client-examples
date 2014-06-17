@@ -71,8 +71,6 @@ public class ChartboostExampleActivity extends Activity {
 		//Pro Tip: Use code below to print Android ID in log:
 		String android_id = Secure.getString(getBaseContext().getContentResolver(),Secure.ANDROID_ID);
 		Log.e(TAG, android_id);
-		
-		this.cb.showInterstitial();
 
 	}
 
@@ -86,6 +84,8 @@ public class ChartboostExampleActivity extends Activity {
 		super.onStart();
 		
 		this.cb.onStart(this);
+		
+		this.cb.showInterstitial();
 	}
 
 	/*
