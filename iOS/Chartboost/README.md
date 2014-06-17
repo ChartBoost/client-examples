@@ -1,6 +1,6 @@
 # Chartboost for iOS
 
-*Version 4.4.1*
+*Version 4.5*
 
 The Chartboost iOS SDK is the cornerstone of the Chartboost network. It
 provides the functionality for showing interstitials, More-Apps pages, and

@@ -1,6 +1,12 @@
 ###Changelog
 
+##### v4.5
+
+- Newsfeed publicly available.
+- Post Install Analytics publicly available.
+
 ##### v4.4.1
+
 - Chartboost now supports x86_64 architectures (64 bit simulator)
 
 ##### v4.4
@@ -14,7 +20,6 @@
 - New delegate method (didFailToRecordClick:withError:). Called when a click is registered, but the user is not fowrwarded to the App Store
 - Orientation improvements: an ad will now be displayed at any orientation it
   claims supporting, when the current orientation is not.
-
 
 ##### v4.2
 

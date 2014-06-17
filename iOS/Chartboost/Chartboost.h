@@ -1,7 +1,7 @@
 //
 //  Chartboost.h
 //  Chartboost
-//  4.4.1
+//  4.5
 //
 //  Copyright 2011 Chartboost. All rights reserved.
 //
@@ -106,30 +106,33 @@ extern CBLocation const CBLocationQuit; /** Screen display right before the play
 - (NSString *)deviceIdentifier;
 
 /// Assign the delegate for status calls and configuration
-@property (assign) id <ChartboostDelegate> delegate;
+@property (nonatomic, weak) id <ChartboostDelegate> delegate;
 
 /// app id used to by chartboost to identify this application
-@property (retain) NSString *appId;
+@property (nonatomic, strong) NSString *appId;
 
 /// signature used for this application
-@property (retain) NSString *appSignature;
+@property (nonatomic, strong) NSString *appSignature;
 
 /// app public key used for crypto
-@property (retain) NSString *appPublicKey;
+@property (nonatomic, strong) NSString *appPublicKey;
 
 /// Set this property to use chartboost with advanced view hierarchies
-@property (retain) UIView *rootView;
+@property (nonatomic, strong) UIView *rootView;
 
 /// Override the orientation (otherwise automatically detected from status bar)
-@property (assign) UIInterfaceOrientation orientation;
+@property (nonatomic, assign) UIInterfaceOrientation orientation;
 
 /// Extra configuration settings
 /// Timeout for requests (minimum is 10s, default is 30s)
-@property (assign) NSUInteger timeout;
+@property (nonatomic, assign) NSUInteger timeout;
 
 /**
  * Advanced caching options
  */
+
+/// Cache an more apps (no location)
+- (void)cacheMoreApps __attribute__((deprecated("As of version 4.4, use cacheMoreApps:(CBLocation)location")));
 
 /// Cache an interstitial taking a location argument
 - (void)cacheInterstitial:(CBLocation)location;
@@ -141,10 +144,10 @@ extern CBLocation const CBLocationQuit; /** Screen display right before the play
 - (void)prefetchVideos;
 
 /// This property controls autocaching behavior
-@property (assign) BOOL autoCacheAds;
+@property (nonatomic, assign) BOOL autoCacheAds;
 
 /// check for cached images
-@property (assign) BOOL scansBundleForCachedImages;
+@property (nonatomic, assign) BOOL scansBundleForCachedImages;
 
 /**
  * Old interface without locations
@@ -174,6 +177,13 @@ extern CBLocation const CBLocationQuit; /** Screen display right before the play
  */
 - (void)showInterstitial __attribute__((deprecated("As of version 4.4, use showInterstitial:(CBLocation)location")));
 
+
+/// show the more apps page (no location)
+/**
+ * @deprecated Use showMoreApps:(CBLocation)location
+ */
+- (void)showMoreApps __attribute__((deprecated("As of version 4.4, use showMoreApps:(CBLocation)location")));
+
 @end
 
 
@@ -185,6 +195,9 @@ extern CBLocation const CBLocationQuit; /** Screen display right before the play
 
 /// Called before requesting an interestitial from the back-end
 - (BOOL)shouldRequestInterstitial:(CBLocation)location;
+
+// Called when an interstitial has been displayed on the screen.
+- (void)didDisplayInterstitial:(CBLocation)location;
 
 /// Called when an interstitial has been received, before it is presented on screen
 /// Return NO if showing an interstitial is currently innapropriate, for example if the user has entered the main game mode.
@@ -227,6 +240,9 @@ extern CBLocation const CBLocationQuit; /** Screen display right before the play
 /// Called when an more apps page has been received, before it is presented on screen
 /// Return NO if showing the more apps page is currently innapropriate
 - (BOOL)shouldDisplayMoreApps;
+
+/// Called when an more apps page has been displayed.
+- (BOOL)didDisplayMoreApps;
 
 /// Called when the More Apps page has been received and cached
 - (void)didCacheMoreApps;
