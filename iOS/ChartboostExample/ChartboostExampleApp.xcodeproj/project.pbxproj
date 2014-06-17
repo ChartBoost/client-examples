@@ -33,6 +33,11 @@
 		031E69BE1926AB3F002CC3DE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		031E69C01926AB49002CC3DE /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		031E69C21926AB5E002CC3DE /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		B5A85F8819400B4300A8AB02 /* CBMoreAppsButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBMoreAppsButton.h; path = ../Chartboost/CBMoreAppsButton.h; sourceTree = SOURCE_ROOT; };
+		B5A85F8919400B6800A8AB02 /* CBNewsfeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBNewsfeed.h; path = ../Chartboost/CBNewsfeed.h; sourceTree = SOURCE_ROOT; };
+		B5A85F8A19400B6800A8AB02 /* CBNewsfeedUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBNewsfeedUI.h; path = ../Chartboost/CBNewsfeedUI.h; sourceTree = SOURCE_ROOT; };
+		B5A85F8B19400B6800A8AB02 /* CBPostInstallAnalyticsTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBPostInstallAnalyticsTracker.h; path = ../Chartboost/CBPostInstallAnalyticsTracker.h; sourceTree = SOURCE_ROOT; };
+		B5A85F8C19400C1100A8AB02 /* CBStory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBStory.h; path = ../Chartboost/CBStory.h; sourceTree = SOURCE_ROOT; };
 		DA15D5F3183D90E9000995E3 /* Chartboost.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Chartboost.h; path = ../Chartboost/Chartboost.h; sourceTree = SOURCE_ROOT; };
 		DA93B6AD182B31BC00C21472 /* ChartboostExampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChartboostExampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA93B6B0182B31BC00C21472 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -144,6 +149,11 @@
 		DA93B6E8182B32EF00C21472 /* Chartboost */ = {
 			isa = PBXGroup;
 			children = (
+				B5A85F8C19400C1100A8AB02 /* CBStory.h */,
+				B5A85F8919400B6800A8AB02 /* CBNewsfeed.h */,
+				B5A85F8A19400B6800A8AB02 /* CBNewsfeedUI.h */,
+				B5A85F8B19400B6800A8AB02 /* CBPostInstallAnalyticsTracker.h */,
+				B5A85F8819400B4300A8AB02 /* CBMoreAppsButton.h */,
 				DA15D5F3183D90E9000995E3 /* Chartboost.h */,
 				DAB77406183409EE0042A205 /* libChartboost.a */,
 				DAB77408183409FA0042A205 /* README.md */,
@@ -339,6 +349,7 @@
 					"\"$(SRCROOT)/../Chartboost\"",
 					"$(inherited)",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -357,6 +368,7 @@
 					"\"$(SRCROOT)/../Chartboost\"",
 					"$(inherited)",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
