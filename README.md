@@ -30,3 +30,5 @@ When run in Simulator or on an iOS device, the project can display any interstit
 This file contains the Chartboost code you'd add to the file in your own game &ndash; you can configure it with your App ID (`String appId`) and App Signature (`String appSignature`) to test the Chartboost integration, independent of your code. 
 
 When run on an Android device, the project can display any interstitials or More Apps pages you've set up (via the Chartboost dashboard) to run in the game; it's a great way to debug problematic campaign logic.
+
+**ATTENTION:** While the Android Sample Project will run as is, this integration is skipping the Google Play Services Library integration step as described here: https://help.chartboost.com/documentation/android. This integration step is not required for Amazon builds, but is best practice for games submitted to the Google Play Store.

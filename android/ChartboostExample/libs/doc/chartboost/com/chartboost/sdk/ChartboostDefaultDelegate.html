@@ -202,7 +202,8 @@ An implementation of <A HREF="../../../com/chartboost/sdk/ChartboostDelegate.htm
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../com/chartboost/sdk/ChartboostDefaultDelegate.html#didFailToLoadInterstitial(java.lang.String)">didFailToLoadInterstitial</A></B>(java.lang.String&nbsp;location)</CODE>
+<TD><CODE><B><A HREF="../../../com/chartboost/sdk/ChartboostDefaultDelegate.html#didFailToLoadInterstitial(java.lang.String, com.chartboost.sdk.Model.CBError.CBImpressionError)">didFailToLoadInterstitial</A></B>(java.lang.String&nbsp;location,
+                          <A HREF="../../../com/chartboost/sdk/Model/CBError.CBImpressionError.html" title="enum in com.chartboost.sdk.Model">CBError.CBImpressionError</A>&nbsp;error)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called when an interstitial has failed to come back from the server,
@@ -212,7 +213,7 @@ An implementation of <A HREF="../../../com/chartboost/sdk/ChartboostDelegate.htm
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../com/chartboost/sdk/ChartboostDefaultDelegate.html#didFailToLoadMoreApps()">didFailToLoadMoreApps</A></B>()</CODE>
+<TD><CODE><B><A HREF="../../../com/chartboost/sdk/ChartboostDefaultDelegate.html#didFailToLoadMoreApps(com.chartboost.sdk.Model.CBError.CBImpressionError)">didFailToLoadMoreApps</A></B>(<A HREF="../../../com/chartboost/sdk/Model/CBError.CBImpressionError.html" title="enum in com.chartboost.sdk.Model">CBError.CBImpressionError</A>&nbsp;error)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called when a more apps page has failed to come back from the server,
@@ -222,12 +223,13 @@ An implementation of <A HREF="../../../com/chartboost/sdk/ChartboostDelegate.htm
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../com/chartboost/sdk/ChartboostDefaultDelegate.html#didFailToLoadUrl(java.lang.String)">didFailToLoadUrl</A></B>(java.lang.String&nbsp;url)</CODE>
+<TD><CODE><B><A HREF="../../../com/chartboost/sdk/ChartboostDefaultDelegate.html#didFailToRecordClick(java.lang.String, com.chartboost.sdk.Model.CBError.CBClickError)">didFailToRecordClick</A></B>(java.lang.String&nbsp;uri,
+                     <A HREF="../../../com/chartboost/sdk/Model/CBError.CBClickError.html" title="enum in com.chartboost.sdk.Model">CBError.CBClickError</A>&nbsp;error)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called when a URL loaded by clicking on an interstitial or an app
-   from the more apps page has failed to load due to either network problems,
-   being unable to parse the URL, or Chartboost not finding a valid activity.</TD>
+   from the more apps page has failed to load, causing no recorded click
+   on the Chartboost server.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -268,6 +270,14 @@ An implementation of <A HREF="../../../com/chartboost/sdk/ChartboostDelegate.htm
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called when an more apps view has been received, before it is presented on screen.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/chartboost/sdk/ChartboostDefaultDelegate.html#shouldPauseClickForConfirmation(com.chartboost.sdk.Chartboost.CBAgeGateConfirmation)">shouldPauseClickForConfirmation</A></B>(<A HREF="../../../com/chartboost/sdk/Chartboost.CBAgeGateConfirmation.html" title="interface in com.chartboost.sdk">Chartboost.CBAgeGateConfirmation</A>&nbsp;callback)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called  after the user clicks on the ad.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -388,18 +398,19 @@ public void <B>didCacheInterstitial</B>(java.lang.String&nbsp;location)</PRE>
 </DL>
 <HR>
 
-<A NAME="didFailToLoadInterstitial(java.lang.String)"><!-- --></A><H3>
+<A NAME="didFailToLoadInterstitial(java.lang.String, com.chartboost.sdk.Model.CBError.CBImpressionError)"><!-- --></A><H3>
 didFailToLoadInterstitial</H3>
 <PRE>
-public void <B>didFailToLoadInterstitial</B>(java.lang.String&nbsp;location)</PRE>
+public void <B>didFailToLoadInterstitial</B>(java.lang.String&nbsp;location,
+                                      <A HREF="../../../com/chartboost/sdk/Model/CBError.CBImpressionError.html" title="enum in com.chartboost.sdk.Model">CBError.CBImpressionError</A>&nbsp;error)</PRE>
 <DL>
-<DD><B>Description copied from interface: <CODE><A HREF="../../../com/chartboost/sdk/ChartboostDelegate.html#didFailToLoadInterstitial(java.lang.String)">ChartboostDelegate</A></CODE></B></DD>
+<DD><B>Description copied from interface: <CODE><A HREF="../../../com/chartboost/sdk/ChartboostDelegate.html#didFailToLoadInterstitial(java.lang.String, com.chartboost.sdk.Model.CBError.CBImpressionError)">ChartboostDelegate</A></CODE></B></DD>
 <DD>Called when an interstitial has failed to come back from the server,
    or there is already an impression visible, or already an interstitial
    request of the same location pending.
 <P>
 <DD><DL>
-<DT><B>Specified by:</B><DD><CODE><A HREF="../../../com/chartboost/sdk/ChartboostDelegate.html#didFailToLoadInterstitial(java.lang.String)">didFailToLoadInterstitial</A></CODE> in interface <CODE><A HREF="../../../com/chartboost/sdk/ChartboostDelegate.html" title="interface in com.chartboost.sdk">ChartboostDelegate</A></CODE></DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../com/chartboost/sdk/ChartboostDelegate.html#didFailToLoadInterstitial(java.lang.String, com.chartboost.sdk.Model.CBError.CBImpressionError)">didFailToLoadInterstitial</A></CODE> in interface <CODE><A HREF="../../../com/chartboost/sdk/ChartboostDelegate.html" title="interface in com.chartboost.sdk">ChartboostDelegate</A></CODE></DL>
 </DD>
 <DD><DL>
 <DT><B>Parameters:</B><DD><CODE>location</CODE> - the location identifier text</DL>
@@ -550,18 +561,18 @@ public boolean <B>shouldDisplayMoreApps</B>()</PRE>
 </DL>
 <HR>
 
-<A NAME="didFailToLoadMoreApps()"><!-- --></A><H3>
+<A NAME="didFailToLoadMoreApps(com.chartboost.sdk.Model.CBError.CBImpressionError)"><!-- --></A><H3>
 didFailToLoadMoreApps</H3>
 <PRE>
-public void <B>didFailToLoadMoreApps</B>()</PRE>
+public void <B>didFailToLoadMoreApps</B>(<A HREF="../../../com/chartboost/sdk/Model/CBError.CBImpressionError.html" title="enum in com.chartboost.sdk.Model">CBError.CBImpressionError</A>&nbsp;error)</PRE>
 <DL>
-<DD><B>Description copied from interface: <CODE><A HREF="../../../com/chartboost/sdk/ChartboostDelegate.html#didFailToLoadMoreApps()">ChartboostDelegate</A></CODE></B></DD>
+<DD><B>Description copied from interface: <CODE><A HREF="../../../com/chartboost/sdk/ChartboostDelegate.html#didFailToLoadMoreApps(com.chartboost.sdk.Model.CBError.CBImpressionError)">ChartboostDelegate</A></CODE></B></DD>
 <DD>Called when a more apps page has failed to come back from the server,
    or there is already an impression visible, or already a more apps
    request pending.
 <P>
 <DD><DL>
-<DT><B>Specified by:</B><DD><CODE><A HREF="../../../com/chartboost/sdk/ChartboostDelegate.html#didFailToLoadMoreApps()">didFailToLoadMoreApps</A></CODE> in interface <CODE><A HREF="../../../com/chartboost/sdk/ChartboostDelegate.html" title="interface in com.chartboost.sdk">ChartboostDelegate</A></CODE></DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../com/chartboost/sdk/ChartboostDelegate.html#didFailToLoadMoreApps(com.chartboost.sdk.Model.CBError.CBImpressionError)">didFailToLoadMoreApps</A></CODE> in interface <CODE><A HREF="../../../com/chartboost/sdk/ChartboostDelegate.html" title="interface in com.chartboost.sdk">ChartboostDelegate</A></CODE></DL>
 </DD>
 <DD><DL>
 </DL>
@@ -657,21 +668,42 @@ public boolean <B>shouldRequestInterstitialsInFirstSession</B>()</PRE>
 </DL>
 <HR>
 
-<A NAME="didFailToLoadUrl(java.lang.String)"><!-- --></A><H3>
-didFailToLoadUrl</H3>
+<A NAME="didFailToRecordClick(java.lang.String, com.chartboost.sdk.Model.CBError.CBClickError)"><!-- --></A><H3>
+didFailToRecordClick</H3>
 <PRE>
-public void <B>didFailToLoadUrl</B>(java.lang.String&nbsp;url)</PRE>
+public void <B>didFailToRecordClick</B>(java.lang.String&nbsp;uri,
+                                 <A HREF="../../../com/chartboost/sdk/Model/CBError.CBClickError.html" title="enum in com.chartboost.sdk.Model">CBError.CBClickError</A>&nbsp;error)</PRE>
 <DL>
-<DD><B>Description copied from interface: <CODE><A HREF="../../../com/chartboost/sdk/ChartboostDelegate.html#didFailToLoadUrl(java.lang.String)">ChartboostDelegate</A></CODE></B></DD>
+<DD><B>Description copied from interface: <CODE><A HREF="../../../com/chartboost/sdk/ChartboostDelegate.html#didFailToRecordClick(java.lang.String, com.chartboost.sdk.Model.CBError.CBClickError)">ChartboostDelegate</A></CODE></B></DD>
 <DD>Called when a URL loaded by clicking on an interstitial or an app
-   from the more apps page has failed to load due to either network problems,
-   being unable to parse the URL, or Chartboost not finding a valid activity.
+   from the more apps page has failed to load, causing no recorded click
+   on the Chartboost server.
 <P>
 <DD><DL>
-<DT><B>Specified by:</B><DD><CODE><A HREF="../../../com/chartboost/sdk/ChartboostDelegate.html#didFailToLoadUrl(java.lang.String)">didFailToLoadUrl</A></CODE> in interface <CODE><A HREF="../../../com/chartboost/sdk/ChartboostDelegate.html" title="interface in com.chartboost.sdk">ChartboostDelegate</A></CODE></DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../com/chartboost/sdk/ChartboostDelegate.html#didFailToRecordClick(java.lang.String, com.chartboost.sdk.Model.CBError.CBClickError)">didFailToRecordClick</A></CODE> in interface <CODE><A HREF="../../../com/chartboost/sdk/ChartboostDelegate.html" title="interface in com.chartboost.sdk">ChartboostDelegate</A></CODE></DL>
 </DD>
 <DD><DL>
-<DT><B>Parameters:</B><DD><CODE>url</CODE> - : the URL that your phone was unable to load</DL>
+<DT><B>Parameters:</B><DD><CODE>uri</CODE> - : the URI that your device was unable to load<DD><CODE>error</CODE> - : the reason for the the failure</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="shouldPauseClickForConfirmation(com.chartboost.sdk.Chartboost.CBAgeGateConfirmation)"><!-- --></A><H3>
+shouldPauseClickForConfirmation</H3>
+<PRE>
+public boolean <B>shouldPauseClickForConfirmation</B>(<A HREF="../../../com/chartboost/sdk/Chartboost.CBAgeGateConfirmation.html" title="interface in com.chartboost.sdk">Chartboost.CBAgeGateConfirmation</A>&nbsp;callback)</PRE>
+<DL>
+<DD>Called  after the user clicks on the ad. Developers can use this callback to do age confirmation and provide the result back to the SDK in the 
+  callback function by passing a boolean value
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../com/chartboost/sdk/ChartboostDelegate.html#shouldPauseClickForConfirmation(com.chartboost.sdk.Chartboost.CBAgeGateConfirmation)">shouldPauseClickForConfirmation</A></CODE> in interface <CODE><A HREF="../../../com/chartboost/sdk/ChartboostDelegate.html" title="interface in com.chartboost.sdk">ChartboostDelegate</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>callback</CODE> - Callback function to pass a boolean value to the callback function based on the user selection. 
+                                 Execute this callback only if you enable the age gate support.
+<DT><B>Returns:</B><DD>Default: 'false'
+                 (Return 'false' to disable the age gate and 'true' to enable age gate support)</DL>
 </DD>
 </DL>
 <!-- ========= END OF CLASS DATA ========= -->

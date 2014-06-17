@@ -1,3 +1,4 @@
 com.chartboost.sdk
-com.chartboost.sdk.Analytics
 com.chartboost.sdk.Libraries
+com.chartboost.sdk.Model
+com.chartboost.sdk.Tracking
