@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="boY-0W-GA8">
-                                <rect key="frame" x="182" y="357" width="118" height="30"/>
+                                <rect key="frame" x="182" y="269" width="118" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Show More Apps">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -48,7 +48,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kN0-Fv-6cw">
-                                <rect key="frame" x="20" y="357" width="124" height="30"/>
+                                <rect key="frame" x="20" y="269" width="124" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Cache More Apps">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -57,14 +57,27 @@
                                     <action selector="cacheMoreApps" destination="vXZ-lx-hvc" eventType="touchUpInside" id="6PH-gT-DnC"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJc-HQ-LeD" userLabel="Button - Show Newsfeed">
+                                <rect key="frame" x="22" y="372" width="112" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Show Newsfeed">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showNewsfeed" destination="vXZ-lx-hvc" eventType="touchUpInside" id="n2E-7T-QGJ"/>
+                                </connections>
+                            </button>
                         </subviews>
+                        <color key="backgroundColor" red="0.8078432083" green="0.89019614459999996" blue="0.90196084980000002" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="AVt-3P-4OP" secondAttribute="centerY" constant="103" id="LOl-4K-YOC"/>
                             <constraint firstAttribute="centerX" secondItem="AVt-3P-4OP" secondAttribute="centerX" constant="-85" id="VfL-FI-oLG"/>
+                            <constraint firstAttribute="centerX" secondItem="zJc-HQ-LeD" secondAttribute="centerX" constant="82" id="XbZ-ji-eX6"/>
                             <constraint firstAttribute="centerX" secondItem="boY-0W-GA8" secondAttribute="centerX" constant="-81" id="Z9M-rU-gRN"/>
-                            <constraint firstAttribute="centerY" secondItem="boY-0W-GA8" secondAttribute="centerY" constant="-88" id="cMo-18-oph"/>
-                            <constraint firstAttribute="centerY" secondItem="kN0-Fv-6cw" secondAttribute="centerY" constant="-88" id="fhx-t6-zF9"/>
+                            <constraint firstAttribute="centerY" secondItem="boY-0W-GA8" secondAttribute="centerY" id="cMo-18-oph"/>
+                            <constraint firstAttribute="centerY" secondItem="kN0-Fv-6cw" secondAttribute="centerY" id="fhx-t6-zF9"/>
                             <constraint firstAttribute="centerX" secondItem="O39-Eg-MZa" secondAttribute="centerX" constant="82" id="gZW-x6-bhm"/>
+                            <constraint firstAttribute="centerY" secondItem="zJc-HQ-LeD" secondAttribute="centerY" constant="-103" id="rT7-GP-3Rc"/>
                             <constraint firstAttribute="centerY" secondItem="O39-Eg-MZa" secondAttribute="centerY" constant="103" id="sVg-2g-OG8"/>
                             <constraint firstAttribute="centerX" secondItem="kN0-Fv-6cw" secondAttribute="centerX" constant="78" id="zfb-Fi-cYp"/>
                         </constraints>

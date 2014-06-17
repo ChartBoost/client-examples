@@ -7,9 +7,10 @@
 //
 
 #import "Chartboost.h"
+#import "CBNewsfeed.h"
 #import "AppDelegate.h"
 
-@interface AppDelegate () <ChartboostDelegate>
+@interface AppDelegate () <ChartboostDelegate, CBNewsfeedDelegate>
 @end
 
 @implementation AppDelegate 
@@ -22,9 +23,16 @@
 
     // Begin a user session. Must not be dependent on user actions or any prior network requests.
     // Must be called every time your app becomes active.
+    //
+    // IMPORTANT: Replace the appId and appSignature with your app's from the Dashboard!
     [Chartboost startWithAppId:@"4f21c409cd1cb2fb7000001b" appSignature:@"92e2de2fd7070327bdeb54c15a5295309c6fcd2d" delegate:self];
     
     [[Chartboost sharedChartboost] showInterstitial:CBLocationHomeScreen];
+    
+    // Begin Newsfeed initialization.
+    CBNewsfeed *newsfeed = [CBNewsfeed shared];
+    newsfeed.delegate = self;
+    [newsfeed startNewsfeed];
 }
 
 /*
