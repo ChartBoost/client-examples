@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Fep-eL-G1w"/>
+                        <viewControllerLayoutGuide type="bottom" id="RLY-AU-LlD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dHw-VE-hCT">
+                                <rect key="frame" x="455" y="251" width="211" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Show Interstitial"/>
+                                <connections>
+                                    <action selector="showInterstitial" destination="BYZ-38-t0r" eventType="touchUpInside" id="M0n-d2-EcP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5FW-nZ-Cdr">
+                                <rect key="frame" x="106" y="251" width="221" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Cache Interstitial"/>
+                                <connections>
+                                    <action selector="cacheInterstitial" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Zc-b4-yAg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQG-Cg-JXm">
+                                <rect key="frame" x="446" y="488" width="229" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Show More Apps">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showMoreApps" destination="BYZ-38-t0r" eventType="touchUpInside" id="gp7-dW-mXC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZR-YM-AcD">
+                                <rect key="frame" x="102" y="488" width="239" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Cache More Apps">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cacheMoreApps" destination="BYZ-38-t0r" eventType="touchUpInside" id="q8T-QD-Err"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xH9-HU-mgH" userLabel="Button - Show Newsfeed">
+                                <rect key="frame" x="108" y="725" width="216" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Show Newsfeed">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showNewsfeed" destination="BYZ-38-t0r" eventType="touchUpInside" id="KnF-ld-PBi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.8078432083" green="0.89019614459999996" blue="0.90196084980000002" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="bZR-YM-AcD" secondAttribute="centerX" constant="162.5" id="5pU-I2-Xth"/>
+                            <constraint firstAttribute="centerY" secondItem="bZR-YM-AcD" secondAttribute="centerY" id="9GG-3K-NBM"/>
+                            <constraint firstAttribute="centerY" secondItem="dHw-VE-hCT" secondAttribute="centerY" constant="237" id="M6q-5y-x9c"/>
+                            <constraint firstAttribute="centerY" secondItem="5FW-nZ-Cdr" secondAttribute="centerY" constant="237" id="Qd9-no-O3c"/>
+                            <constraint firstAttribute="centerX" secondItem="NQG-Cg-JXm" secondAttribute="centerX" constant="-176.5" id="QnB-fI-Z8J"/>
+                            <constraint firstAttribute="centerY" secondItem="NQG-Cg-JXm" secondAttribute="centerY" id="Uza-wj-1rI"/>
+                            <constraint firstAttribute="centerX" secondItem="xH9-HU-mgH" secondAttribute="centerX" constant="168" id="YYB-KA-fI2"/>
+                            <constraint firstAttribute="centerX" secondItem="5FW-nZ-Cdr" secondAttribute="centerX" constant="167.5" id="Z6M-ci-LLK"/>
+                            <constraint firstAttribute="centerX" secondItem="dHw-VE-hCT" secondAttribute="centerX" constant="-176.5" id="hqR-tY-fMK"/>
+                            <constraint firstAttribute="centerY" secondItem="xH9-HU-mgH" secondAttribute="centerY" constant="-237" id="nb0-kq-blc"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackOpaque"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
