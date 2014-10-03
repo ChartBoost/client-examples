@@ -1,5 +1,7 @@
-### NOTE: This repo is deprecated!  
+### NOTE: This repo is *deprecated*!  
 ### Please refer to http://help.chartboost.com/downloads for the latest sample projects, included in our SDK download packages.
+
+----------
 
 ####Download Instructions for Chartboost Sample Projects
 
