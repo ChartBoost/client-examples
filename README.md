@@ -1,4 +1,7 @@
-###Download Instructions for Chartboost Sample Projects
+### NOTE: This repo is deprecated!  
+### Please refer to http://help.chartboost.com/downloads for the latest sample projects, included in our SDK download packages.
+
+####Download Instructions for Chartboost Sample Projects
 
 In this repo, you'll find two Chartboost example integrations: one for iOS games, and one for apps on the Android side. To get started, hit the **ZIP** button to download the repo:
 
